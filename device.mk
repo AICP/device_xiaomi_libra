@@ -318,6 +318,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     persist.metadata_dynfps.disable=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp
+
 # Enable low power video mode for 4K encode
 PRODUCT_PROPERTY_OVERRIDES += \
     vidc.debug.perf.mode=2 \
