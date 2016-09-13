@@ -204,4 +204,7 @@ BOARD_HARDWARE_CLASS += device/xiaomi/libra/cmhw
 # Disable Jack & Jill compilation
 ANDROID_COMPILE_WITH_JACK := false
 
+# Configure jemalloc
+MALLOC_SVELTE := true
+
 -include vendor/xiaomi/libra/BoardConfigVendor.mk
