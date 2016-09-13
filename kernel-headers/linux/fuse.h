@@ -296,7 +296,7 @@ struct fuse_open_out {
   uint64_t fh;
   uint32_t open_flags;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-  int32_t lower_fd;
+  uint32_t padding;
 };
 struct fuse_release_in {
   uint64_t fh;
