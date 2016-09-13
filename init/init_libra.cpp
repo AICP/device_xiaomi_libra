@@ -30,6 +30,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 
@@ -112,11 +113,10 @@ static int get_variant()
 
 static void init_target_properties()
 {
-    char hardware[PROP_VALUE_MAX];
-    int rc;
+    std::string hardware;
 
-    rc = property_get("ro.hardware", hardware);
-    if (!rc || strncmp(hardware, "libra", PROP_VALUE_MAX))
+    hardware = property_get("ro.hardware");
+    if (hardware != "libra")
         return;
 
     if (get_variant() == 0) {

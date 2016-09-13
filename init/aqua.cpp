@@ -19,6 +19,7 @@
 #define KLOG_LEVEL 6
 
 #include <stdlib.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <fcntl.h>
 
@@ -56,7 +57,7 @@ static void update_fstab(const char *fstab, const char *line)
 {
     FILE *f = fopen(fstab, "a");
     if (f != NULL) {
-        fprintf(f, line);
+        fprintf(f, "%s", line);
         fclose(f);
         KLOG_ERROR(LOG_TAG, "Update %s successfully\n", fstab);
     } else {
