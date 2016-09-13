@@ -11,6 +11,7 @@ $(call inherit-product, device/xiaomi/libra/aosp_libra.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_libra
 PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Mi-4c
 TARGET_MANUFACTURER := Xiaomi
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
