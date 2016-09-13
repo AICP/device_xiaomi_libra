@@ -38,12 +38,17 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/audio/audio_policy.conf:system/etc/audio_policy.conf \
     device/xiaomi/libra/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/xiaomi/libra/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/xiaomi/libra/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/xiaomi/libra/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    device/xiaomi/libra/audio/audio_policy_volumes_drc.xml:system/etc/audio_policy_volumes_drc.xml \
     device/xiaomi/libra/audio/surround_sound_rec_AZ.cfg:system/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg \
-    device/xiaomi/libra/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt
+    device/xiaomi/libra/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:system/etc/default_volume_tables.xml \
 
 #Sound Trigger
 PRODUCT_COPY_FILES += \
@@ -170,6 +175,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc
 
 # Audio HAL and utilities
+USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_PACKAGES += \
     audio.primary.msm8992 \
     audio.a2dp.default \
