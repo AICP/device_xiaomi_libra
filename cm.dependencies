@@ -1,7 +1,7 @@
 [
   {
-    "repository": "android_kernel_xiaomi_msm8992",
-    "target_path": "kernel/xiaomi/msm8992"
+    "repository": "Resurrected-Kernel",
+    "target_path": "kernel/xiaomi/libra"
   },
   {
     "repository": "android_external_stlport",
