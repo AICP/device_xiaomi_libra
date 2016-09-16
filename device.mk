@@ -356,9 +356,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # for perfd
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq \
-    ro.min_freq_0=384000 \
-    ro.min_freq_4=384000
+    sys.io.scheduler=sio \
+    ro.min_freq_0=302400 \
+    ro.min_freq_4=302400
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
