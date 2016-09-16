@@ -175,7 +175,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc
 
 # Audio HAL and utilities
-USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_PACKAGES += \
     audio.primary.msm8992 \
     audio.a2dp.default \
