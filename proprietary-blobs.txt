@@ -648,12 +648,6 @@ vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libthermalioctl.so
 
-# Fingerprint blobs for aqua
-lib/lib_fpc_tac_shared.so
-lib/hw/fingerprint.libra.so
-lib64/lib_fpc_tac_shared.so
-lib64/hw/fingerprint.libra.so
-
 # Time services
 -app/TimeService/TimeService.apk
 bin/time_daemon

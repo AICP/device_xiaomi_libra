@@ -19,23 +19,6 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := \
-    aqua.cpp
-
-LOCAL_MODULE := aqua
-LOCAL_MODULE_TAGS := optional
-LOCAL_FORCE_STATIC_EXECUTABLE := true
-LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN)
-LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
-
-LOCAL_CFLAGS := -D__STDC_LIMIT_MACROS -Werror
-
-LOCAL_STATIC_LIBRARIES := libstdc++ libcutils libc
-
-include $(BUILD_EXECUTABLE)
-
-include $(CLEAR_VARS)
-
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
 LOCAL_CFLAGS := -Wall

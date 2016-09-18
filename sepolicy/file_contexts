@@ -16,7 +16,6 @@
 /system/vendor/bin/mm-qcamera-daemon u:object_r:mm-qcamerad_exec:s0
 /system/bin/init\.libra\.power\.sh u:object_r:init-power-sh_exec:s0
 /system/bin/init\.libra\.sh        u:object_r:libra-sh_exec:s0
-/sbin/aqua                         u:object_r:aqua_exec:s0
 /system/bin/fingerprint\.sh        u:object_r:fingerprint-sh_exec:s0
 /system/bin/xiaomi_hwaddrs         u:object_r:xiaomi_hwaddrs_exec:s0
 
