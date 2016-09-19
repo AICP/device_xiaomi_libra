@@ -40,6 +40,7 @@ TARGET_KERNEL_CONFIG := resurrection_libra_defconfig
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9-kernel/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 BOARD_KERNEL_BASE        := 0x00000000
