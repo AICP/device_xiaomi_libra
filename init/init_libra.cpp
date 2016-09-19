@@ -95,8 +95,8 @@ static void init_target_properties()
         property_set("ro.build.product", "libra");
         property_set("ro.product.model", "Mi-4c");
         property_set("ro.product.device", "libra");
-        property_set("ro.build.description", "libra-user 5.1.1 LMY47V V8.0.4.0.LXKCNDG release-keys");
-        property_set("ro.build.fingerprint", "Xiaomi/libra/libra:5.1.1/LMY47V/V8.0.4.0.LXKCNDG:user/release-keys");
+        property_set("ro.build.description", "libra-user 5.1.1 LMY47V V8.0.5.0.LXKCNDG release-keys");
+        property_set("ro.build.fingerprint", "Xiaomi/libra/libra:5.1.1/LMY47V/V8.0.5.0.LXKCNDG:user/release-keys");
 }
 
 void vendor_load_properties()
