@@ -1,6 +1,6 @@
 [
   {
-    "repository": "Resurrected-Kernel",
+    "repository": "android_kernel_xiaomi_libra",
     "target_path": "kernel/xiaomi/libra"
   },
   {
