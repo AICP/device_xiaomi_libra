@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli \
-    libxml2
+    libxml2 \
+    libprotobuf-cpp-full
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
