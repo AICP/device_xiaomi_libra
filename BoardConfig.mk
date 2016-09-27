@@ -129,6 +129,7 @@ MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 # Remove opaque check in preparing dirty region
 BOARD_GLOBAL_CFLAGS += -DHWUI_OPENGL_QUIRK
 
+BOARD_USES_ADRENO := true
 HAVE_ADRENO_SOURCE:= false
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
