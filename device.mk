@@ -243,6 +243,9 @@ PRODUCT_PACKAGES += \
     libshim_camera
 
 PRODUCT_PACKAGES += \
+    libboringssl-compat
+
+PRODUCT_PACKAGES += \
     keystore.msm8992 \
     gatekeeper.msm8992
 
