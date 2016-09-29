@@ -18,4 +18,4 @@ Rear Camera  | 13.0 MP, LED flash
 Front Camera | 5.0 MP
 Release Date | Sep. 2015
 
-![Xiaomi Mi-4c](http://igao7.qiniudn.com/uploads/new/article/600_600/201509/56013886e1d4b.png "Xiaomi Mi-4c")
+![Xiaomi Mi-4c](http://en.miui.com/data/attachment/forum/201509/23/095201af2ylj7dswul8iw7.jpg "Xiaomi Mi-4c")
