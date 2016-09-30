@@ -487,10 +487,6 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/libra/init.libra.misc.rc.user:root/init.libra.misc.rc
 endif
 
-# Telephony extension
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
-
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
