@@ -155,7 +155,9 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8992 \
     libgenlock \
     memtrack.msm8992 \
-    lights.libra
+    lights.libra \
+    liboverlay \
+    libtinyxml
 
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -185,6 +187,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli \
+    libtinyxml2 \
     libxml2 \
     libprotobuf-cpp-full
 
