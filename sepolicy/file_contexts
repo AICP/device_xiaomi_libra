@@ -1,12 +1,5 @@
-# Data files
-/data/fpc(/.*)?                u:object_r:fingerprintd_data_file:s0
-/data/fpc_tpl(/.*)?            u:object_r:fingerprintd_data_file:s0
-/data/fpc_images(/.*)?         u:object_r:fingerprintd_data_file:s0
-
 # factory reset protection partition
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/config          u:object_r:frp_block_device:s0
-
-/dev/fpc1020                           u:object_r:fingerprint_device:s0
 
 # Consumer IR
 /dev/lirc0                             u:object_r:lirc_device:s0
@@ -16,7 +9,6 @@
 /system/vendor/bin/mm-qcamera-daemon u:object_r:mm-qcamerad_exec:s0
 /system/bin/init\.libra\.power\.sh u:object_r:init-power-sh_exec:s0
 /system/bin/init\.libra\.sh        u:object_r:libra-sh_exec:s0
-/system/bin/fingerprint\.sh        u:object_r:fingerprint-sh_exec:s0
 /system/bin/xiaomi_hwaddrs         u:object_r:xiaomi_hwaddrs_exec:s0
 
 /sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
@@ -29,6 +21,4 @@
 /sys/devices/soc\.0/qcom,cpubw\.[0-9]+/devfreq/qcom,cpubw\.[0-9]+(/.*)? u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/soc\.0/qcom,cpubw\.[0-9]+/devfreq/qcom,cpubw\.[0-9]+/bw_hwmon(/.*)? u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/soc\.0/qcom,mincpubw\.[0-9]+/devfreq/qcom,mincpubw\.[0-9]+(/.*)? u:object_r:sysfs_devices_system_cpu:s0
-/sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0(/.*)?   u:object_r:sysfs_devices_fingerprint:s0
-/sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0         u:object_r:sysfs_devices_fingerprint:s0
 /sys/devices/system/cpu/cpu[0-9]+/cpufreq/scaling_governor          u:object_r:sysfs_devices_system_cpu:s0
