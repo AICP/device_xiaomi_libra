@@ -10,6 +10,7 @@
 /system/bin/init\.libra\.power\.sh u:object_r:init-power-sh_exec:s0
 /system/bin/init\.libra\.sh        u:object_r:libra-sh_exec:s0
 /system/bin/xiaomi_hwaddrs         u:object_r:xiaomi_hwaddrs_exec:s0
+/vendor/bin/slim_daemon            u:object_r:location_exec:s0
 
 /sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
 /sys/devices/soc\.0/qcom,bcl[^/]*(/.*)?                             u:object_r:sysfs_thermal:s0
@@ -22,3 +23,5 @@
 /sys/devices/soc\.0/qcom,cpubw\.[0-9]+/devfreq/qcom,cpubw\.[0-9]+/bw_hwmon(/.*)? u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/soc\.0/qcom,mincpubw\.[0-9]+/devfreq/qcom,mincpubw\.[0-9]+(/.*)? u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/system/cpu/cpu[0-9]+/cpufreq/scaling_governor          u:object_r:sysfs_devices_system_cpu:s0
+
+/sys/kernel/debug/rmt_storage(/.*)?                                 u:object_r:debugfs_rmt_storage:s0

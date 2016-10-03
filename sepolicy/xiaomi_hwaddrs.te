@@ -13,3 +13,5 @@ allow xiaomi_hwaddrs bluetooth_data_file:dir { search write add_name };
 allow xiaomi_hwaddrs bluetooth_data_file:file { write getattr open create };
 allow xiaomi_hwaddrs wifi_data_file:dir { search write add_name };
 allow xiaomi_hwaddrs wifi_data_file:file { write getattr open create };
+
+allow xiaomi_hwaddrs sysfs:file { read open };

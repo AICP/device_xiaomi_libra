@@ -1,0 +1,2 @@
+allow wcnss_service self:capability setgid;
+allow wcnss_service self:capability setuid;

@@ -19,3 +19,8 @@ allow libra-sh shell_exec:file r_file_perms;
 
 # execute toybox/toolbox
 allow libra-sh toolbox_exec:file rx_file_perms;
+
+allow libra-sh vfat:dir { read open };
+allow libra-sh vfat:dir search;
+allow libra-sh vfat:file { read open };
+allow libra-sh vfat:file getattr;
