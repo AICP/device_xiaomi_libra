@@ -1,0 +1,1 @@
+allow gatekeeperd vfat:dir search;
