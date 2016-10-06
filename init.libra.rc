@@ -223,16 +223,12 @@ on boot
     chmod 0660 /proc/touchscreen/edge_touch_mode
 
     # Key disabler
-    chown root system /proc/touchscreen/nav_button_enable
-    chmod 0660 /proc/touchscreen/nav_button_enable
+    chown root system /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/0dbutton
+    chmod 0660 /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/0dbutton
 
     # Vibrator
-    chown system system /sys/class/timed_output/vibrator/vtg_level
-    chown system system /sys/class/timed_output/vibrator/vtg_max
-    chown system system /sys/class/timed_output/vibrator/vtg_min
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_level
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_max
-    chmod 0644 /sys/class/timed_output/vibrator/vtg_min
+    chown system system /sys/devices/virtual/timed_output/vibrator/amp
+    chmod 0664 /sys/devices/virtual/timed_output/vibrator/amp
 
     # Torch
     chown system system /sys/class/leds/led:torch_0/brightness
