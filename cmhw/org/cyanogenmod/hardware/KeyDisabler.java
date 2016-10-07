@@ -29,7 +29,7 @@ import org.cyanogenmod.internal.util.FileUtils;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/0dbutton";
+    private static String CONTROL_PATH = "/proc/touchscreen/nav_button_enable";
 
     public static boolean isSupported() {
         return FileUtils.isFileReadable(CONTROL_PATH) &&

@@ -225,6 +225,8 @@ on boot
     # Key disabler
     chown root system /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/0dbutton
     chmod 0660 /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/0dbutton
+    chown root system /proc/touchscreen/nav_button_enable
+    chmod 0660 /proc/touchscreen/nav_button_enable
 
     # Vibrator
     chown system system /sys/devices/virtual/timed_output/vibrator/amp
