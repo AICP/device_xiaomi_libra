@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Launch Dev Tools -->
+    <string name="development_tools_title">Інструменти розробника</string>
+
+    <!-- Setting checkbox title for root access -->
+    <string name="root_access">Root доступ</string>
+    <string name="root_access_warning_title">Дозволити root доступ?</string>
+    <string name="root_access_warning_message">Дозвіл програмам отримувати root доступ может бути дуже небезпечним і ставить під загрозу безпеку вашої системи!</string>
+    <string name="root_access_none">Вимкнено</string>
+    <string name="root_access_apps">Тільки програми</string>
+    <string name="root_access_adb">Тільки ADB</string>
+    <string name="root_access_all">Програми та ADB</string>
+
+    <!-- Preference link for root appops -->
+    <string name="root_appops_title">Керування root доступом</string>
+    <string name="root_appops_summary">Перегляд і керування правилами root доступу</string>
+
+    <!-- Lights settings -->
+    <string name="lights_label">Індикатори</string>
+
+    <!-- Memory -->
+    <string name="memory_startup_apps_title">Програми, що запускаються при завантаженні</string>
+
+    <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Розширене перезавантаження</string>
+    <string name="advanced_reboot_summary">Увімкнути варіанти перезавантаження (Recovery, Bootloader або швидке перезавантаження) в меню кнопки живлення</string>
+
+</resources>
