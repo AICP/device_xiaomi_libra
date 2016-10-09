@@ -39,7 +39,6 @@
 
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_title">Приватність</string>
-    <string name="privacy_settings_category" translatable="false">CyanogenMod</string>
 
     <!-- Privacy Guard -->
     <string name="privacy_guard_switch_label">Увімкнути Сторожа Приватності</string>
@@ -98,7 +97,6 @@
     <string name="notification_light_default_value">За замовчуванням</string>
     <string name="notification_light_missed_call_title">Пропущений виклик</string>
     <string name="notification_light_voicemail_title">Голосова пошта</string>
-    <string name="notification_light_brightness" translatable="false">@string/brightness</string>
     <string name="notification_light_screen_on">Індикатор при увімкн. екрані</string>
     <string name="notification_light_zen_mode">Індикатор в режимі «Не турбувати»</string>
     <string name="notification_light_use_multiple_leds">Кілька світлодіодів</string>
@@ -355,7 +353,6 @@
 
     <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
     <string name="soundtone_title">Звук сповіщення</string>
-    <string name="soundtone_summary" translatable="false">""</string>
 
     <!-- Title for application group setting screen -->
     <string name="profile_appgroups_title">Групи програм</string>
