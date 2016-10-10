@@ -29,7 +29,7 @@
     <string name="settings">Налаштування</string>
     <string name="name">Ім\'я</string>
     <string name="back">Назад</string>
-    <string name="finish">Finish</string>
+    <string name="finish">Завершити</string>
     <string name="next">Далі</string>
     <string name="on">Увімк.</string>
     <string name="off">Вимк.</string>
@@ -281,7 +281,7 @@
     <string name="profile_write_nfc_tag">Прив\'язати до NFC-мітки</string>
     <string name="profile_write_touch_tag">Прикладіть мітку для її запису</string>
     <string name="profile_write_success">Мітка успішно записана</string>
-    <string name="profile_write_failed">Помилка записe даних на мітку!</string>
+    <string name="profile_write_failed">Помилка запису даних на мітку!</string>
     <string name="profile_selected">Вибраний профіль: %1$s</string>
     <string name="profile_nfc_text">Запис NFC-мітки для профілю дозволить дотиком до мітки вибрати потрібний профіль. При повторному дотику буде відновлений профіль який використовувався раніше.</string>
     <string name="profile_unknown_nfc_tag">Невідомий профіль</string>
@@ -301,13 +301,13 @@
     <string name="profile_entries_no_override">Залишити без змін</string>
 
     <!-- Add Profile -->
-    <string name="profile_name_title">Ім\'я</string>
+    <string name="profile_name_title">Назва</string>
     <string name="new_profile_name">&lt;новий профіль&gt;</string>
 
     <!-- Rename Dialog  -->
     <string name="rename_dialog_title">Перейменувати</string>
-    <string name="rename_dialog_message">Введіть нове ім\'я</string>
-    <string name="rename_dialog_hint">Введіть ім\'я профілю</string>
+    <string name="rename_dialog_message">Введіть нову назву</string>
+    <string name="rename_dialog_hint">Введіть назву профілю</string>
 
     <!-- Reset Profiles -->
     <string name="profile_reset_title">Скинути</string>
@@ -359,9 +359,9 @@
     <string name="profile_applist_title">Програми</string>
     <string name="profile_new_appgroup">Нова група програм</string>
     <string name="profile_delete_appgroup">Видалити цю групу програм?</string>
-    <string name="profile_appgroup_name_prompt">Вкажіть ім\'я нової групи програм</string>
-    <string name="profile_appgroup_name_title">Ім\'я</string>
-    <string name="duplicate_appgroup_name">Таке Ім\'я групи вже існує!</string>
+    <string name="profile_appgroup_name_prompt">Вкажіть назву нової групи програм</string>
+    <string name="profile_appgroup_name_title">Назва</string>
+    <string name="duplicate_appgroup_name">Така назва групи вже існує!</string>
 
     <!-- Add application dialog box title -->
     <string name="profile_choose_app">Вибрати програму</string>
@@ -459,12 +459,12 @@
     <string name="contributors_cloud_fragment_title">Розробники</string>
     <string name="contributors_cloud_loading_message">Завантаження даних\u2026</string>
     <string name="contributors_cloud_failed_message">Не вдалося завантажити дані розробників</string>
-    <string name="contributor_info_menu">Інформація про розробників</string>
+    <string name="contributor_info_menu">Інформація про розробника</string>
     <string name="contributor_info_msg">
         <![CDATA[<b>Ім\'я:</b> <xliff:g id="name">%1$s</xliff:g><br/><br/>
                  <b>Нік:</b> <xliff:g id="nick">%2$s</xliff:g><br/><br/>
                  <b>Комміти:</b> <xliff:g id="commits">%3$s</xliff:g>]]></string>
-    <string name="contributions_info_menu">Інформація про розробників</string>
+    <string name="contributions_info_menu">Загальна статистика</string>
     <string name="contributions_info_msg">
         <![CDATA[<b>Всього учасників проекту:</b> <xliff:g id="total_contributors">%1$s</xliff:g><br/><br/>
                  <b>Всього коммітів:</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
