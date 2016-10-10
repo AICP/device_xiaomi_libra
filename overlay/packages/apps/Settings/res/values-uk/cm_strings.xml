@@ -42,4 +42,10 @@
     <string name="advanced_reboot_title">Розширене перезавантаження</string>
     <string name="advanced_reboot_summary">Увімкнути варіанти перезавантаження (Recovery, Bootloader або швидке перезавантаження) в меню кнопки живлення</string>
 
+    <!-- lock screen visualizer -->
+    <string name="lockscreen_visualizer_title">Візуалізація під час програвання музики</string>
+
+    <!-- title for lock screen weather preference -->
+    <string name="lockscreen_weather_enabled_title">Показати погоду</string>
+
 </resources>
