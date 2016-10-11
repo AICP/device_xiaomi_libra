@@ -26,4 +26,8 @@
 
     <!-- Zero shutter lag-->
     <string name="pref_camera_zsl_default" translatable="false">off</string>
+
+    <!-- Default video size -->
+    <string name="pref_video_quality_default" translatable="false">1920x1080</string>
+
 </resources>
