@@ -341,6 +341,12 @@ on property:wc_transport.start_hci=true
 on property:wc_transport.start_hci=false
     stop start_hci_filter
 
+on property:wc_transport.start_root=true
+    start start_hci_filter
+
+on property:wc_transport.start_root=false
+    stop start_hci_filter
+
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
