@@ -147,9 +147,9 @@ PRODUCT_PACKAGES += \
     libhealthd.qcom
 
 PRODUCT_PACKAGES += \
+    copybit.msm8992 \
     gralloc.msm8992 \
     hwcomposer.msm8992 \
-    libgenlock \
     memtrack.msm8992 \
     lights.libra \
     liboverlay \
@@ -315,6 +315,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
     persist.metadata_dynfps.disable=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.enable.sglscale=1 \
+    debug.mdpcomp.idletime=600 \
+    debug.mdpcomp.logs=0 \
+    persist.debug.wfd.enable=1 \
+    persist.demo.hdmirotationlock=false \
+    persist.hwc.enable_vds=1 \
+    persist.hwc.mdpcomp.maxpermixer=5 \
+    persist.hwc.ptor.enable=true \
+    persist.mdpcomp.4k2kSplit=1 \
+    persist.mdpcomp_perfhint=50 \
+    persist.sys.wfd.virtual=0 \
+    ro.qualcomm.cabl=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
