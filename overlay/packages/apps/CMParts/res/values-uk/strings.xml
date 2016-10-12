@@ -36,6 +36,8 @@
     <string name="yes">Так</string>
     <string name="no">Ні</string>
     <string name="search">Пошук</string>
+    <string name="disabled">Вимкнуто</string>
+    <string name="enabled">Увімкнуто</string>
 
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_title">Приватність</string>
@@ -102,6 +104,7 @@
     <string name="notification_light_use_multiple_leds">Кілька світлодіодів</string>
     <string name="keywords_lights_brightness_level">Зменшити яскравість світлодіодів</string>
     <string name="notification_light_automagic">Підбирати кольори автоматично</string>
+    <string name="notification_light_automagic_summary">Автоматичний підбір кольорів</string>
 
     <!-- Lights settings, LED notification -->
     <string name="led_notification_title">Індикатор подій</string>
@@ -501,5 +504,21 @@
     <string name="display_rotation_90_title">90 градусів</string>
     <string name="display_rotation_180_title">180 градусів</string>
     <string name="display_rotation_270_title">270 градусів</string>
+
+    <!-- Weather -->
+    <string name="weather_settings_title">Погода</string>
+    <string name="weather_settings_no_services_prompt">Немає встановлених служб постачальників погоди</string>
+    <string name="weather_settings_no_services_summary">Встановіть постачальника погоди для отримання інформації про погоду</string>
+    <string name="weather_settings_button">Налаштування постачальника</string>
+    <string name="weather_settings_activity_not_found">Не вдалося запустити меню налаштування цього постачальника</string>
+    <string name="weather_settings_add_weather_provider">Додати провайдера погоди</string>
+    <string name="weather_settings_general_settings_title">Загальні</string>
+    <string name="weather_settings_providers_title">Провайдери</string>
+    <string name="weather_settings_temp_units_title">Одиниця температури</string>
+    <string name="weather_settings_temp_celsius">Градус Цельсія</string>
+    <string name="weather_settings_temp_fahrenheit">Градус Фаренгейта</string>
+    <string name="weather_settings_keyword">погода</string>
+    <string name="status_bar_show_weather_title">Показувати погоду</string>
+    <string name="status_bar_show_weather_summary">Показувати температуру в рядку стану</string>
 
 </resources>

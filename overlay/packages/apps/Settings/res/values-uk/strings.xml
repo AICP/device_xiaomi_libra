@@ -15,6 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- StorageCleaner Settings -->
+    <string name="storage_menu_cleanup">Очищення пам\'яті</string>
+
     <string name="profiles_settings_title">Системні профілі</string>
 
 </resources>

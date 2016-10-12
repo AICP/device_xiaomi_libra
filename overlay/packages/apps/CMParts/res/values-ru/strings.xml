@@ -36,6 +36,8 @@
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="search">Поиск</string>
+    <string name="disabled">Отключено</string>
+    <string name="enabled">Включено</string>
 
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_title">Конфиденциальность</string>
@@ -102,6 +104,7 @@
     <string name="notification_light_use_multiple_leds">Несколько светодиодов</string>
     <string name="keywords_lights_brightness_level">Уменьшить яркость светодиодов</string>
     <string name="notification_light_automagic">Подбирать цвета автоматически</string>
+    <string name="notification_light_automagic_summary">Автоматический подбор цвета</string>
 
     <!-- Lights settings, LED notification -->
     <string name="led_notification_title">Индикатор событий</string>
@@ -501,5 +504,21 @@
     <string name="display_rotation_90_title">90 градусов</string>
     <string name="display_rotation_180_title">180 градусов</string>
     <string name="display_rotation_270_title">270 градусов</string>
+
+    <!-- Weather -->
+    <string name="weather_settings_title">Погода</string>
+    <string name="weather_settings_no_services_prompt">Нет установленных служб поставщиков погоды</string>
+    <string name="weather_settings_no_services_summary">Установите поставщика погоды для получения информации о погоде</string>
+    <string name="weather_settings_button">Настройки поставщика</string>
+    <string name="weather_settings_activity_not_found">Не удается запустить меню настройки этого поставщика</string>
+    <string name="weather_settings_add_weather_provider">Добавить провайдера погоды</string>
+    <string name="weather_settings_general_settings_title">Общие</string>
+    <string name="weather_settings_providers_title">Провайдеры</string>
+    <string name="weather_settings_temp_units_title">Единица температуры</string>
+    <string name="weather_settings_temp_celsius">Градус Цельсия</string>
+    <string name="weather_settings_temp_fahrenheit">Градус Фаренгейта</string>
+    <string name="weather_settings_keyword">погода</string>
+    <string name="status_bar_show_weather_title">Показывать погоду</string>
+    <string name="status_bar_show_weather_summary">Показывать температуру в строке состояния</string>
 
 </resources>
