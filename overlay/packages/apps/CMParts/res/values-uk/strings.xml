@@ -496,7 +496,8 @@
     <!-- Display : Rotation  -->
     <string name="accelerometer_title">Автоповорот екрану</string>
     <string name="display_rotation_title">Поворот екрану</string>
-    <string name="display_rotation_disabled">Вимкнено</string>
+    <string name="display_rotation_enabled">Увімкнуто</string>
+    <string name="display_rotation_disabled">Вимкнуто</string>
     <string name="display_rotation_unit">градусів</string>
     <string name="display_lockscreen_rotation_title">Поворот екрану блокування</string>
     <string name="display_rotation_category_title">Режими повороту</string>
