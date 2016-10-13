@@ -325,7 +325,7 @@ service rmt_storage /system/bin/rmt_storage
 
 service rfs_access /system/bin/rfs_access
     class core
-    user system
+    user root
     group system net_raw
     writepid /dev/cpuset/system-background/tasks
 
