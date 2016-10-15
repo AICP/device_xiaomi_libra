@@ -139,6 +139,10 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_PACKAGES += \
     Gello
 
+# LibraDoze
+PRODUCT_PACKAGES += \
+    LibraDoze
+
 # for off charging mode
 WITH_CM_CHARGER := false
 
