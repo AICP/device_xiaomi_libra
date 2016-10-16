@@ -48,4 +48,7 @@
     <!-- title for lock screen weather preference -->
     <string name="lockscreen_weather_enabled_title">Сведения о погоде</string>
 
+    <!-- About phone screen, build date -->
+    <string name="build_date">Дата сборки</string>
+
 </resources>
