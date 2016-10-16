@@ -51,4 +51,16 @@
     <!-- About phone screen, build date -->
     <string name="build_date">Дата складання</string>
 
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">Вибір способу введення</string>
+    <string name="ime_switcher_notify_summary">Показувати сповіщення для вибору способу введення</string>
+
+    <!-- Stylus Icon -->
+    <string name="stylus_icon_enabled_title">Вказівник пера</string>
+    <string name="stylus_icon_enabled_summary">Показувати значок вказівника при роботі з пером</string>
+
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">Закрити програму</string>
+    <string name="kill_app_longpress_back_summary">Довге натискання кнопки «Назад» закриє запущену прогаму</string>
+
 </resources>
