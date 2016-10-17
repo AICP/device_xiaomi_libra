@@ -67,4 +67,10 @@
     <string name="proximity_wake_title">Предотвращение случайного пробуждения</string>
     <string name="proximity_wake_summary">Проверять датчик приближения перед пробуждением экрана</string>
 
+    <!-- CM Updater -->
+    <string name="cmupdate_settings_title">Обновление CyanogenMod</string>
+
+    <!-- About phone screen, CyanogenMod version -->
+    <string name="mod_version">Версия CyanogenMod</string>
+
 </resources>
