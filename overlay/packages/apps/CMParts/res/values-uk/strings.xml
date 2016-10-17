@@ -522,4 +522,20 @@
     <string name="status_bar_show_weather_title">Показувати погоду</string>
     <string name="status_bar_show_weather_summary">Показувати температуру в рядку стану</string>
 
+    <!-- Power: Performance profiles -->
+    <string name="perf_profile_settings_title">Енергозбереження та продуктивність</string>
+    <string name="perf_profile_settings_summary">Налаштування параметрів енергозбереження та продуктивності пристрою</string>
+    <string name="perf_profile_overview_summary">Поточний профіль: <xliff:g id="perf_profile_name">%1$s</xliff:g></string>
+    <string name="perf_profile_category_title">Продуктивність пристрою</string>
+    <string name="perf_profile_title">Профіль продуктивності: <xliff:g id="perf_profile_name">%1$s</xliff:g></string>
+    <string name="perf_profile_fail_toast">Профіль продуктивності на даний час недоступний</string>
+    <string name="power_save_category_title">Енергозбереження</string>
+    <string name="power_save_title">Максимальна економія енергії</string>
+    <string name="power_save_summary">Обмеження продуктивності пристрою і фонової активності для економії енергії</string>
+    <string name="auto_power_save_title">Автоматичне енергозбереження</string>
+    <string name="auto_power_save_summary_on">Автоматично вмикати режим енергозбереження при відсотку батареї %d </string>
+    <string name="auto_power_save_summary_off">Не вмикати режим енергозбереження автоматично</string>
+    <string name="app_perf_profiles_title">Автоматична оптимізація</string>
+    <string name="app_perf_profiles_summary">Автоматичний вибір відповідного профілю продуктивності для додатків і режимів використання</string>
+
 </resources>
