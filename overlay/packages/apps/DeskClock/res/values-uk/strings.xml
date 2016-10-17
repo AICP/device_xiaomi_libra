@@ -47,5 +47,10 @@
     <!-- Select the alarm from external device -->
     <string name="alarm_select_external">Музика</string>
 
+    <!-- Summary texts for shake and flip actions -->
+    <string name="action_summary_snooze">відкласти будильник</string>
+    <string name="action_summary_dismiss">відключити будильник</string>
+    <string name="action_summary_do_nothing">не робити нічого</string>
+
 </resources>
 
