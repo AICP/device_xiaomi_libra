@@ -63,4 +63,8 @@
     <string name="kill_app_longpress_back">Закрити програму</string>
     <string name="kill_app_longpress_back_summary">Довге натискання кнопки «Назад» закриє запущену прогаму</string>
 
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">Запобігання випадкового пробудження</string>
+    <string name="proximity_wake_summary">Перевіряти датчик наближення перед пробудженням екрану</string>
+
 </resources>
