@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2012 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--  for speed dial -->
+    <string name="speed_dial_settings">Настройки быстрого набора</string>
+
+    <string name="speed_dial_not_set">(не установлено)</string>
+
+    <string name="speed_dial_replace">Изменить</string>
+
+    <string name="speed_dial_delete">Удалить</string>
+
+    <string name="speed_dial_unassigned_dialog_title">Нет назначенного номера</string>
+
+    <string name="speed_dial_unassigned_dialog_message">Клавише \'<xliff:g id="number">%s</xliff:g>\' не присвоен номер быстрого набора. Назначить его?</string>
+
+    <string name="dialog_speed_dial_airplane_mode_message">Чтобы использовать Быстрый набор, выключите режим полёта.</string>
+
+    <string name="yes">Да</string>
+
+    <string name="no">Нет</string>
+
+</resources>
