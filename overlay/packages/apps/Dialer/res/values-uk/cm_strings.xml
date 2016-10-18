@@ -18,7 +18,7 @@
     <string name="incall_vibration_category_title">Вібрація під час виклику</string>
     <string name="incall_vibrate_outgoing_title">Вібрувати при відповіді</string>
     <string name="incall_vibrate_call_waiting_title">Вібрувати при очікуванні виклику</string>
-    <string name="incall_vibrate_hangup_title">>Вібрувати при завершені</string>
+    <string name="incall_vibrate_hangup_title">Вібрувати при завершені</string>
     <string name="incall_vibrate_45_title">Вібрувати кожну хвилину</string>
     <string name="incall_vibrate_45_summary">Вібрувати кожну хвилину на 45 секунді під час вихідного виклику</string>
 
@@ -32,7 +32,7 @@
     <string name="enable_forward_lookup_summary">Показувати найближчі організації при пошуку в номеронабирачі</string>
     <string name="enable_people_lookup_title">Пошук людей</string>
     <string name="enable_people_lookup_summary">Показувати результати з мережі про контакти при пошуку в номеронабирачі</string>
-    <string name="enable_reverse_lookup_title">>Зворотній пошук</string>
+    <string name="enable_reverse_lookup_title">Зворотній пошук</string>
     <string name="enable_reverse_lookup_summary">Пошук інформації про людину або місці для вхідних з невідомих номерів</string>
     <string name="forward_lookup_provider_title">Постачальник прямого пошуку</string>
     <string name="people_lookup_provider_title">Постачальник пошуку даних про людей</string>

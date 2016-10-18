@@ -32,7 +32,7 @@
     <string name="enable_forward_lookup_summary">Показывать ближайшие организации при поиске в номеронабирателе</string>
     <string name="enable_people_lookup_title">Поиск по людям</string>
     <string name="enable_people_lookup_summary">Показывать результаты из сети для контактов при поиске</string>
-    <string name="enable_reverse_lookup_title">>Обратный поиск</string>
+    <string name="enable_reverse_lookup_title">Обратный поиск</string>
     <string name="enable_reverse_lookup_summary">Искать информацию о человеке/месте для незнакомых входящих номеров</string>
     <string name="forward_lookup_provider_title">Поставщик прямого поиска</string>
     <string name="people_lookup_provider_title">Поставщик поиска данных о людях</string>
