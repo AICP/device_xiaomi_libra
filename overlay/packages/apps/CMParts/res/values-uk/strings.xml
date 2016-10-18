@@ -538,4 +538,15 @@
     <string name="app_perf_profiles_title">Автоматична оптимізація</string>
     <string name="app_perf_profiles_summary">Автоматичний вибір відповідного профілю продуктивності для додатків і режимів використання</string>
 
+    <!-- Applications: Expanded desktop -->
+    <string name="expanded_desktop_settings_title">Розширений робочий стіл</string>
+    <string name="expanded_desktop_settings_summary">Розширення доступного простору робочого столу за рахунок приховування рядку стану, панелі навігації, або обох</string>
+    <string name="expanded_desktop_options_title">Налаштування розширеного робочого столу</string>
+    <string name="expanded_desktop_style_title">Режим розширеного робочого столу</string>
+    <string name="expanded_desktop_style_hide_nothing">Не ховати</string>
+    <string name="expanded_desktop_style_hide_status">Приховувати рядок стану</string>
+    <string name="expanded_desktop_style_hide_navigation">Приховувати панель навігації</string>
+    <string name="expanded_desktop_style_hide_both">Приховувати обидві</string>
+    <string name="expanded_desktop_nothing_to_show_text">Щоб налаштувати розширений робочий стіл для окремих програм, вимкніть перемикач</string>
+
 </resources>

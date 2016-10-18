@@ -538,4 +538,15 @@
     <string name="app_perf_profiles_title">Автоматическая оптимизация</string>
     <string name="app_perf_profiles_summary">Автоматический вибор соответствующего профеля производительности для приложений и режимов использования</string>
 
+    <!-- Applications: Expanded desktop -->
+    <string name="expanded_desktop_settings_title">Расширенный экран</string>
+    <string name="expanded_desktop_settings_summary">Расширение доступного пространства на экране за счет скрытия строки состояния, панели навигации, или обоих</string>
+    <string name="expanded_desktop_options_title">Настройки расширенного экрана</string>
+    <string name="expanded_desktop_style_title">Режим расширенного экрана</string>
+    <string name="expanded_desktop_style_hide_nothing">Ничего не скрывать</string>
+    <string name="expanded_desktop_style_hide_status">Скрывать строку состояния</string>
+    <string name="expanded_desktop_style_hide_navigation">Скрывать панель навигации</string>
+    <string name="expanded_desktop_style_hide_both">Скрывать обе</string>
+    <string name="expanded_desktop_nothing_to_show_text">Чтобы настроить расширенный экран для отдельных программ, выключите переключатель</string>
+
 </resources>
