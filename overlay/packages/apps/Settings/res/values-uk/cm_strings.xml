@@ -73,4 +73,14 @@
     <!-- About phone screen, CyanogenMod version -->
     <string name="mod_version">Версія CyanogenMod</string>
 
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Вы сейчас в <xliff:g id="step_count">%1$d</xliff:g> кроці для увімкнення режима розробника.</item>
+        <item quantity="other">Вы зараз в <xliff:g id="step_count">%1$d</xliff:g> кроках для увімкнення режима розробника.</item>
+    </plurals>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_cm">Налаштування для розробників увімкнено!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_cm">Не потрібно, налаштування для розробників вже увімкнені.</string>
+
 </resources>
