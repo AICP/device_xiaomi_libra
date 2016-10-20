@@ -8,9 +8,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/libra/aosp_libra.mk)
 
-# Locales
-PRODUCT_LOCALES := uk_UA ru_RU en_US
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_libra
 PRODUCT_BRAND := Xiaomi
