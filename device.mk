@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LibraDoze
 
+# ExtraSettings
+PRODUCT_PACKAGES += \
+    ExtraSettings
+
 # for off charging mode
 WITH_CM_CHARGER := false
 
