@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014 The CyanogenMod Project
+
+     This program is free software; you can redistribute it and/or
+     modify it under the terms of the GNU General Public License
+     version 3 as published by the Free Software Foundation.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+     MA  02110-1301, USA.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="com.cyanogenmod.settings.extra" 
+	  android:sharedUserId="android.uid.system"
+	  coreApp="true" 
+	  >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name" >
+
+		  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+          </intent-filter>
+	    <meta-data
+	        android:name="com.android.settings.category"
+            android:value="com.android.settings.category.device" />
+	  	<meta-data
+	  	    android:name="com.android.settings.title"
+	  	    android:resource="@string/app_name" />
+	  	<meta-data
+	  	    android:name="com.android.settings.icon"
+	  	    android:resource="@drawable/ic_launcher" />
+	    
+        </activity>
+
+        <receiver android:name=".BootReceiver" android:enabled="true" android:exported="false" android:priority="100">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+	
+    </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    
+</manifest>
+

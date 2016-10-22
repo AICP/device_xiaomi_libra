@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Extra Settings</string>
+
+    <!-- edge tap enable -->
+    <string name="pref_title_enable_etap">Edge double tap</string>
+    <string name="pref_summary_enable_etap">Double tap to phone\'s edge causes back</string>
+
+    <string name="pref_header_extra">Extra Settings</string>
+
+</resources>
