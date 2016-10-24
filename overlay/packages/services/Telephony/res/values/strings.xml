@@ -24,6 +24,7 @@
     <string name="network_gsm_wcdma">3G (GSM) auto</string>
     <string name="network_lte_only">LTE only</string>
     <string name="network_gsm_only">GSM only</string>
+    <string name="network_wcdma_only">WCDMA only</string>
     <string name="network_cdma_evdo">3G (CDMA) auto</string>
 
     <string-array name="enabled_networks_4g_choices" translatable="false">
@@ -31,6 +32,7 @@
         <item>@string/network_gsm_wcdma</item>
         <item>@string/network_lte_only</item>
         <item>@string/network_gsm_only</item>
+        <item>@string/network_wcdma_only</item>
         <item>@string/network_lte_cdma</item>
         <item>@string/network_cdma_evdo</item>
         <item>@string/network_1x</item>
@@ -40,6 +42,7 @@
         <item>@string/network_gsm_wcdma</item>
         <item>@string/network_lte_only</item>
         <item>@string/network_gsm_only</item>
+        <item>@string/network_wcdma_only</item>
         <item>@string/network_lte_cdma</item>
         <item>@string/network_cdma_evdo</item>
         <item>@string/network_1x</item>
@@ -49,6 +52,7 @@
         <item>"0"</item>
         <item>"11"</item>
         <item>"1"</item>
+        <item>"2"</item>
         <item>"8"</item>
         <item>"4"</item>
         <item>"5"</item>
@@ -59,6 +63,7 @@
         <item>@string/network_gsm_wcdma</item>
         <item>@string/network_lte_only</item>
         <item>@string/network_gsm_only</item>
+        <item>@string/network_wcdma_only</item>
         <item>@string/network_lte_cdma</item>
         <item>@string/network_cdma_evdo</item>
         <item>@string/network_1x</item>
@@ -68,6 +73,7 @@
         <item>"0"</item>
         <item>"11"</item>
         <item>"1"</item>
+        <item>"2"</item>
         <item>"8"</item>
         <item>"4"</item>
         <item>"5"</item>
