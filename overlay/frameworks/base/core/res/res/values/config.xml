@@ -402,7 +402,7 @@
     <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Button illumination -->
-    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
-    <integer name="config_buttonBrightnessSettingDefault">153</integer>
+    <!-- <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    <integer name="config_buttonBrightnessSettingDefault">153</integer> -->
 
 </resources>
