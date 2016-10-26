@@ -1,3 +1,6 @@
+# Fingerprint access
+allow system_server fingerprint_device:chr_file rw_file_perms;
+
 # For touchscreen proc files
 allow system_server proc_touchscreen:dir search;
 allow system_server proc_touchscreen:file rw_file_perms;

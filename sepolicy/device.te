@@ -1,2 +1,5 @@
+# Fingerprint device
+type fingerprint_device, dev_type;
+
 # Consumer IR
 type lirc_device, dev_type;

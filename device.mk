@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml \
@@ -129,6 +130,10 @@ PRODUCT_COPY_FILES += \
 # MBN
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/init.libra.sh:system/bin/init.libra.sh
+
+# Fingerprint disabler
+PRODUCT_COPY_FILES += \
+    device/xiaomi/libra/fingerprint.sh:system/bin/fingerprint.sh
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -209,6 +214,11 @@ PRODUCT_PACKAGES += \
 # GPS configuration
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/gps.conf:system/etc/gps.conf
+
+# Fingerprint Sensor
+PRODUCT_PACKAGES += \
+    fingerprint.libra \
+    fingerprintd
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
