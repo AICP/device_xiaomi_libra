@@ -39,7 +39,7 @@
     </string>
 
     <!-- Select the source of the alarm -->
-    <string name="alarm_select">Вибор будильника</string>
+    <string name="alarm_select">Выбор будильника</string>
 
     <!-- Select the ringtone as alarm -->
     <string name="alarm_select_ringtone">Мелодия</string>
