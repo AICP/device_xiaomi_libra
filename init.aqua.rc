@@ -33,9 +33,6 @@ on charger
 on property:service.fingerprint.enable=0
     stop fingerprintd
 
-on property:init.svc.fingerprintd=running
-    exec u:r:fingerprint-sh:s0 root root system -- /system/bin/fingerprint.sh
-
 service fingerprintd /system/bin/fingerprintd
     class late_start
     user system

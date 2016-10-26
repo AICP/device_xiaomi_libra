@@ -131,10 +131,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/init.libra.sh:system/bin/init.libra.sh
 
-# Fingerprint disabler
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/fingerprint.sh:system/bin/fingerprint.sh
-
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal
