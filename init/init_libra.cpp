@@ -90,13 +90,48 @@ static void init_alarm_boot_properties()
     }
 }
 
+static int get_variant()
+{
+    char buf[6];
+
+    FILE *f = fopen("/sys/bootinfo/hw_version", "r");
+    if (f != NULL) {
+        fscanf(f, "%s", buf);
+        fclose(f);
+    } else {
+        return -1;
+    }
+
+    if (strstr(buf, "0x23")) {
+        return 0;
+    } else /* if (strstr(buf, "0x34")) */ {
+        return 1;
+    }
+
+    return -1;
+}
+
 static void init_target_properties()
 {
+    std::string hardware;
+
+    hardware = property_get("ro.hardware");
+    if (hardware != "libra")
+        return;
+
+    if (get_variant() == 0) {
         property_set("ro.build.product", "libra");
         property_set("ro.product.model", "Mi-4c");
         property_set("ro.product.device", "libra");
         property_set("ro.build.description", "libra-user 5.1.1 LMY47V V8.0.5.0.LXKCNDG release-keys");
         property_set("ro.build.fingerprint", "Xiaomi/libra/libra:5.1.1/LMY47V/V8.0.5.0.LXKCNDG:user/release-keys");
+    } else {
+        property_set("ro.build.product", "aqua");
+        property_set("ro.product.model", "Mi-4s");
+        property_set("ro.product.device", "aqua");
+        property_set("ro.build.description", "aqua-user 5.1.1 LMY47V V7.5.3.0.LAJCNDE release-keys");
+        property_set("ro.build.fingerprint", "Xiaomi/aqua/aqua:5.1.1/LMY47V/V7.5.3.0.LAJCNDE:user/release-keys");
+    }
 }
 
 void vendor_load_properties()

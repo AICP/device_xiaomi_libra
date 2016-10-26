@@ -21,6 +21,8 @@
 
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/init.libra.rc:root/init.libra.rc \
+    device/xiaomi/libra/init.aqua.rc:root/init.aqua.rc \
+    device/xiaomi/libra/init.recovery.libra.rc:root/init.recovery.libra.rc \
     device/xiaomi/libra/init.libra.usb.rc:root/init.libra.usb.rc \
     device/xiaomi/libra/fstab.libra:root/fstab.libra \
     device/xiaomi/libra/ueventd.libra.rc:root/ueventd.libra.rc \
@@ -153,6 +155,10 @@ WITH_CM_CHARGER := false
 PRODUCT_PACKAGES += \
     charger_res_images \
     libhealthd.qcom
+
+# aqua boot helper
+PRODUCT_PACKAGES += \
+    aqua
 
 PRODUCT_PACKAGES += \
     copybit.msm8992 \
