@@ -159,13 +159,13 @@
   <string name="pref_camera_facerc_title">Визначення обличчя</string>
   <!-- Sharpness -->
   <string name="pref_camera_sharpness_title">Різкість</string>
-  <string name="pref_camera_sharpness_entry_level0">Уровень 0</string>
-  <string name="pref_camera_sharpness_entry_level1">Уровень 1</string>
-  <string name="pref_camera_sharpness_entry_level2">Уровень 2 (по умолч.)</string>
-  <string name="pref_camera_sharpness_entry_level3">Уровень 3</string>
-  <string name="pref_camera_sharpness_entry_level4">Уровень 4</string>
-  <string name="pref_camera_sharpness_entry_level5">Уровень 5</string>
-  <string name="pref_camera_sharpness_entry_level6">Уровень 6</string>
+  <string name="pref_camera_sharpness_entry_level0">Рівень 0</string>
+  <string name="pref_camera_sharpness_entry_level1">Рівень 1</string>
+  <string name="pref_camera_sharpness_entry_level2">Рівень 2 (по умолч.)</string>
+  <string name="pref_camera_sharpness_entry_level3">Рівень 3</string>
+  <string name="pref_camera_sharpness_entry_level4">Рівень 4</string>
+  <string name="pref_camera_sharpness_entry_level5">Рівень 5</string>
+  <string name="pref_camera_sharpness_entry_level6">Рівень 6</string>
   <!-- Contrast -->
   <string name="pref_camera_contrast_title">Контрастність</string>
   <string name="pref_camera_contrast_entry_level0">Рівень 0</string>
