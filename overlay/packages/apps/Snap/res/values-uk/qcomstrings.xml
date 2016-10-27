@@ -161,7 +161,7 @@
   <string name="pref_camera_sharpness_title">Різкість</string>
   <string name="pref_camera_sharpness_entry_level0">Рівень 0</string>
   <string name="pref_camera_sharpness_entry_level1">Рівень 1</string>
-  <string name="pref_camera_sharpness_entry_level2">Рівень 2 (по умолч.)</string>
+  <string name="pref_camera_sharpness_entry_level2">Рівень 2 (типово)</string>
   <string name="pref_camera_sharpness_entry_level3">Рівень 3</string>
   <string name="pref_camera_sharpness_entry_level4">Рівень 4</string>
   <string name="pref_camera_sharpness_entry_level5">Рівень 5</string>
@@ -230,7 +230,7 @@
   <!-- The alias of CameraActivity for gesture operation -->
   <string name="camera_gesture_title">Увімкнути камеру</string>
   <string name="all_in_focus">Все в фокусі</string>
-  <string name="refocus_toast">Натисніть, щоб перефокусовувати останнє фото</string>
+  <string name="refocus_toast">Натисніть, щоб перефокусувати останнє фото</string>
   <!-- Toast messages -->
   <!-- The message is shown in toast when the app encounters an unsupported selection for High-framerate recording mode -->
   <string name="error_app_unsupported_hfr_selection">Прискорена зйомка не підтримується при увімкненій стабілізації зобр., увімкненому HDR або в режимі сповільненої зйомки.</string>
