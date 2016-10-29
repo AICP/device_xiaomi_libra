@@ -178,6 +178,7 @@
     <string name="hardware_keys_action_launch_camera">Запуск камеры</string>
     <string name="hardware_keys_action_sleep">Выключить экран</string>
     <string name="hardware_keys_action_last_app">Последнее приложение</string>
+    <string name="hardware_keys_action_split_screen">Разделенный экран</string>
     <string name="camera_sleep_on_release_title">Временное включение</string>
     <string name="camera_sleep_on_release_summary">Держать экран включённым только при удержании кнопки</string>
     <string name="camera_launch_title">Запуск камеры</string>
