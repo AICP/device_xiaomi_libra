@@ -96,4 +96,9 @@
     <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi-Fi и USB-сети). Отладка отключается при перезагрузке устройства.</string>
     <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только при подключении к доверенным сетям.\n\nДействительно включить эту функцию?</string>
 
+    <!-- Increasing ring tone volume -->
+    <string name="increasing_ring_volume_option_title">Возрастающая громкость звонка</string>
+    <string name="increasing_ring_min_volume_title">Начальная громкость</string>
+    <string name="increasing_ring_ramp_up_time_title">Время увеличения</string>
+
 </resources>
