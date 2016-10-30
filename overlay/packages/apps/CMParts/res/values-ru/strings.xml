@@ -127,7 +127,7 @@
     <string name="live_display_enhance_color_summary">Улучшить сочность оттенков кожи, пейзажей и других изображений</string>
     <string name="live_display_color_profile_title">Цветовой профиль</string>
     <string name="live_display_color_profile_standard_title">Стандартный</string>
-   <string name="live_display_color_profile_standard_summary">Точная цветопередача и яркие белые тона</string>
+    <string name="live_display_color_profile_standard_summary">Точная цветопередача и яркие белые тона</string>
     <string name="live_display_color_profile_natural_title">Естественный</string>
     <string name="live_display_color_profile_natural_summary">Натуральные цвета и оттенки кожи</string>
     <string name="live_display_color_profile_dynamic_title">Динамический</string>
@@ -220,6 +220,8 @@
     <string name="navigation_bar_left_summary">Отображать панель навигации слева в альбомной ориентации экрана</string>
     <string name="navigation_bar_arrow_keys_title">Перемещение курсора</string>
     <string name="navigation_bar_arrow_keys_summary">Отображать кнопки перемещения курсора влево или вправо при вводе. Кнопка выбора метода ввода отображаться не будет.</string>
+    <string name="navigation_bar_home_long_press_title">Долгое нажатие кнопки «Домой»</string>
+    <string name="navigation_bar_home_double_tap_title">Двойное нажатие кнопки «Домой»</string>
     <string name="navigation_bar_recents_title">Долгое нажатие кнопки «Обзор»</string>
 
     <!-- Power menu -->

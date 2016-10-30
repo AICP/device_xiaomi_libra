@@ -127,7 +127,7 @@
     <string name="live_display_enhance_color_summary">Поліпшити кольорову насиченість зображень</string>
     <string name="live_display_color_profile_title">Профіль кольорів</string>
     <string name="live_display_color_profile_standard_title">Стандартний</string>
-   <string name="live_display_color_profile_standard_summary">Точна передача кольору та яскравий білий</string>
+    <string name="live_display_color_profile_standard_summary">Точна передача кольору та яскравий білий</string>
     <string name="live_display_color_profile_natural_title">Природний</string>
     <string name="live_display_color_profile_natural_summary">Природні кольори та відтінки шкіри</string>
     <string name="live_display_color_profile_dynamic_title">Динамічний</string>
@@ -220,6 +220,8 @@
     <string name="navigation_bar_left_summary">Показувати рядок навігації зліва в альбомній орієнтації</string>
     <string name="navigation_bar_arrow_keys_title">Показати стрілки під час введення тексту</string>
     <string name="navigation_bar_arrow_keys_summary">Показувати кнопки переміщення курсору вліво або вправо при введенні. Кнопка вибору методу введення не буде відображатися.</string>
+    <string name="navigation_bar_home_long_press_title">Дія при довгому натисканні кнопки \"Дім\"</string>
+    <string name="navigation_bar_home_double_tap_title">Дія при подвійному натисканні кнопки \"Дім\"</string>
     <string name="navigation_bar_recents_title">Дія при довгому натисканні кнопки \"Нещодавні\"</string>
 
     <!-- Power menu -->
