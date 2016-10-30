@@ -186,7 +186,7 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.libra
 
 TARGET_RECOVERY_FSTAB = device/xiaomi/libra/fstab.libra
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/libra
+TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/libra/releasetools
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_HAL_STATIC_LIBRARIES += libhealthd.qcom

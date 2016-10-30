@@ -130,6 +130,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/init.libra.sh:system/bin/init.libra.sh
 
+PRODUCT_COPY_FILES += \
+    device/xiaomi/libra/releasetools/device_check.sh:install/bin/device_check.sh
+	
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal
