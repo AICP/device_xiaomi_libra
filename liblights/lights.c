@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2008 The Android Open Source Project.
- * Copyright (C) 2012-2014, The Linux Foundation. All rights reserved.
+ * Copyright (C) 2008 The Android Open Source Project
+ * Copyright (C) 2014 The  Linux Foundation. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,18 +27,12 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <pthread.h>
+#include <cutils/properties.h>
 
 #include <sys/ioctl.h>
 #include <sys/types.h>
 
 #include <hardware/lights.h>
-
-#ifndef min
-#define min(a,b) ((a)<(b)?(a):(b))
-#endif
-#ifndef max
-#define max(a,b) ((a)<(b)?(b):(a))
-#endif
 
 /******************************************************************************/
 
@@ -46,7 +40,9 @@ static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 static struct light_state_t g_notification;
 static struct light_state_t g_battery;
-static int g_attention = 0;
+static struct light_state_t g_attention;
+
+// cat /sys/class/leds/red/brightness; cat /sys/class/leds/green/brightness; cat /sys/class/leds/blue/brightness;
 
 char const*const RED_LED_FILE
         = "/sys/class/leds/red/brightness";
@@ -60,10 +56,10 @@ char const*const BLUE_LED_FILE
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
-const char *const BUTTONS_FILE_0
+char const*const BUTTON_FILE
         = "/sys/class/leds/button-backlight/brightness";
 
-const char *const BUTTONS_FILE_1
+char const*const BUTTON_FILE1
         = "/sys/class/leds/button-backlight1/brightness";
 
 char const*const RED_BLINK_FILE
@@ -75,30 +71,6 @@ char const*const GREEN_BLINK_FILE
 char const*const BLUE_BLINK_FILE
         = "/sys/class/leds/blue/blink";
 
-char const*const RED_RAMP_MS_FILE
-        = "/sys/class/leds/red/ramp_step_ms";
-
-char const*const GREEN_RAMP_MS_FILE
-        = "/sys/class/leds/green/ramp_step_ms";
-
-char const*const BLUE_RAMP_MS_FILE
-        = "/sys/class/leds/blue/ramp_step_ms";
-
-char const*const RED_DUTY_STEPS_FILE
-        = "/sys/class/leds/red/duty_pcts";
-
-char const*const GREEN_DUTY_STEPS_FILE
-        = "/sys/class/leds/green/duty_pcts";
-
-char const*const BLUE_DUTY_STEPS_FILE
-        = "/sys/class/leds/blue/duty_pcts";
-
-// Number of steps to use in the duty array
-#define LED_DUTY_STEPS       100
-
-// Brightness ramp up/down time for blinking
-#define LED_RAMP_MS          6000
-
 /**
  * device methods
  */
@@ -109,33 +81,57 @@ void init_globals(void)
     pthread_mutex_init(&g_lock, NULL);
 }
 
+static int 
+read_string(char const* path, char* buf)
+{
+  static int already_warned = 0;
+
+  int fd = open(path, O_RDONLY);
+  if(fd >= 0) {
+    int size = (int)read(fd, buf, 12);
+    close(fd);
+    buf[size - 1] = '\0';
+    return size;
+  }
+  
+  if(0 == already_warned) {
+    ALOGE("read_string failed to open %s\n", path);
+    already_warned = 1;
+  }
+  return -1;
+}
+
+static int 
+read_int(char const* path, int* val)
+{
+  char buffer[20];
+  if (read_string(path, buffer) > 0) {
+    *val = (int)strtol(buffer, NULL, 10);
+    return 0;
+  }
+  return -1;
+}
+
 static int
-write_string(const char *path, const char *buffer)
+write_int(char const* path, int value)
 {
     int fd;
     static int already_warned = 0;
 
     fd = open(path, O_RDWR);
     if (fd >= 0) {
-        int bytes = strlen(buffer);
-        int amt = write(fd, buffer, bytes);
+        char buffer[20];
+        int bytes = snprintf(buffer, sizeof(buffer), "%d\n", value);
+        ssize_t amt = write(fd, buffer, (size_t)bytes);
         close(fd);
         return amt == -1 ? -errno : 0;
     } else {
         if (already_warned == 0) {
-            ALOGE("write_string failed to open %s (%s)\n", path, strerror(errno));
+            ALOGE("write_int failed to open %s\n", path);
             already_warned = 1;
         }
         return -errno;
     }
-}
-
-static int
-write_int(const char *path, int value)
-{
-    char buffer[20];
-    sprintf(buffer, "%d\n", value);
-    return write_string(path, buffer);
 }
 
 static int
@@ -158,8 +154,12 @@ set_light_backlight(struct light_device_t* dev,
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
+    if(!dev) {
+        return -1;
+    }
     pthread_mutex_lock(&g_lock);
     err = write_int(LCD_FILE, brightness);
+
     pthread_mutex_unlock(&g_lock);
     return err;
 }
@@ -168,28 +168,46 @@ static int
 set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-    int len, blink;
     int red, green, blue;
-    int onMS, offMS;
     unsigned int colorRGB;
+    int flashMode = 0;
 
     if(!dev) {
         return -1;
     }
 
-    switch (state->flashMode) {
-        case LIGHT_FLASH_TIMED:
-            onMS = state->flashOnMS;
-            offMS = state->flashOffMS;
-            break;
-        case LIGHT_FLASH_NONE:
-        default:
-            onMS = 0;
-            offMS = 0;
-            break;
-    }
+    if (state == NULL) 
+    {
+		write_int(RED_BLINK_FILE, 0);
+		write_int(GREEN_BLINK_FILE, 0);
+		write_int(BLUE_BLINK_FILE, 0);	
 
+		write_int(RED_LED_FILE, 0);
+		write_int(GREEN_LED_FILE, 0);
+		write_int(BLUE_LED_FILE, 0);
+	
+        return 0;
+    }   
+
+    flashMode = state->flashMode;
     colorRGB = state->color;
+
+    if (state->flashOnMS+state->flashOffMS == 0)
+		flashMode = LIGHT_FLASH_NONE;
+
+    if (flashMode != LIGHT_FLASH_NONE) 
+    {
+      if (state->flashOnMS > 0 && state->flashOffMS == 0) {
+		// Always on
+		flashMode = LIGHT_FLASH_NONE;
+      }
+      else if (state->flashOnMS == 0)
+      {
+		// Off
+		flashMode = LIGHT_FLASH_NONE;
+		colorRGB = 0;
+      }
+    }
 
 #if 0
     ALOGD("set_speaker_light_locked mode %d, colorRGB=%08X, onMS=%d, offMS=%d\n",
@@ -199,52 +217,34 @@ set_speaker_light_locked(struct light_device_t* dev,
     red = (colorRGB >> 16) & 0xFF;
     green = (colorRGB >> 8) & 0xFF;
     blue = colorRGB & 0xFF;
-    // bias for true white
-    if (colorRGB != 0 && red == green && green == blue) {
-        blue = (blue * 171) / 256;
-    }
 
-    write_int(RED_BLINK_FILE, 0);
-    write_int(GREEN_BLINK_FILE, 0);
-    write_int(BLUE_BLINK_FILE, 0);
+    ALOGD("set_speaker_light_locked mode %d, colorRGB=%d,%d,%d; flashon %d; flashoff %d\n",
+            flashMode, red, green, blue, state->flashOnMS, state->flashOffMS);
 
-    blink = onMS > 0 && offMS > 0;
+    if (flashMode != LIGHT_FLASH_NONE && colorRGB != 0)
+    {
+		red = (red > 127) ? 255 : 0;
+		green = (green > 127) ? 255 : 0;
+		blue = (blue > 127) ? 255 : 0;
 
-    if (blink) {
-        char dutystr[(3+1)*LED_DUTY_STEPS+1];
-        char* p = dutystr;
-        int stepMS;
-        int n;
+		if (red == 0 && green == 0 && blue == 0) {
+		  red = green = blue = 255; // Defaults to white..
+		}
 
-        onMS = max(onMS, LED_RAMP_MS);
-        offMS = max(offMS, LED_RAMP_MS);
-        stepMS = (onMS+offMS)/LED_DUTY_STEPS;
+		// Sleep 20ms before writing new values to breathe mode..
+		usleep(20000);
 
-        p += sprintf(p, "0");
-        for (n = 1; n < (onMS/stepMS); ++n) {
-            p += sprintf(p, ",%d", min((100*n*stepMS)/LED_RAMP_MS, 100));
-        }
-        for (n = 0; n < LED_DUTY_STEPS-(onMS/stepMS); ++n) {
-            p += sprintf(p, ",%d", 100 - min((100*n*stepMS)/LED_RAMP_MS, 100));
-        }
-        p += sprintf(p, "\n");
+		write_int(RED_BLINK_FILE, (red > 0));
+		write_int(GREEN_BLINK_FILE, (green > 0));
+		write_int(BLUE_BLINK_FILE, (blue > 0));
 
-        if (red) {
-            write_string(RED_DUTY_STEPS_FILE, dutystr);
-            write_int(RED_RAMP_MS_FILE, stepMS);
-            write_int(RED_BLINK_FILE, 1);
-        }
-        if (green) {
-            write_string(GREEN_DUTY_STEPS_FILE, dutystr);
-            write_int(GREEN_RAMP_MS_FILE, stepMS);
-            write_int(GREEN_BLINK_FILE, 1);
-        }
-        if (blue) {
-            write_string(BLUE_DUTY_STEPS_FILE, dutystr);
-            write_int(BLUE_RAMP_MS_FILE, stepMS);
-            write_int(BLUE_BLINK_FILE, 1);
-        }
     } else {
+
+        // Scale to 0 - 48
+        red = (int)((float)red / 255.0f * 48.0f);
+        green = (int)((float)green / 255.0f * 48.0f);
+        blue = (int)((float)blue / 255.0f * 48.0f);
+
         write_int(RED_LED_FILE, red);
         write_int(GREEN_LED_FILE, green);
         write_int(BLUE_LED_FILE, blue);
@@ -256,30 +256,31 @@ set_speaker_light_locked(struct light_device_t* dev,
 static void
 handle_speaker_battery_locked(struct light_device_t* dev)
 {
-    if (is_lit(&g_attention)) {
+    set_speaker_light_locked(dev, NULL);
+
+    if (is_lit(&g_attention)) 
+    {
         set_speaker_light_locked(dev, &g_attention);
-    } else if (is_lit(&g_notification)) {
+    } 
+    else if (is_lit(&g_notification)) 
+    {
         set_speaker_light_locked(dev, &g_notification);
-    } else {
+    } 
+    else 
+    {
         set_speaker_light_locked(dev, &g_battery);
     }
 }
 
 static int
-set_light_buttons(struct light_device_t *dev,
-        const struct light_state_t *state)
+set_light_battery(struct light_device_t* dev,
+        struct light_state_t const* state)
 {
-    int err = 0;
-    int brightness = rgb_to_brightness(state);
-
     pthread_mutex_lock(&g_lock);
-
-    err = write_int(BUTTONS_FILE_0, brightness);
-    err = write_int(BUTTONS_FILE_1, brightness);
-
+    g_battery = *state;
+    handle_speaker_battery_locked(dev);
     pthread_mutex_unlock(&g_lock);
-
-    return err;
+    return 0;
 }
 
 static int
@@ -298,25 +299,25 @@ set_light_attention(struct light_device_t* dev,
         struct light_state_t const* state)
 {
     pthread_mutex_lock(&g_lock);
-    if (state->flashMode == LIGHT_FLASH_HARDWARE) {
-        g_attention = state->flashOnMS;
-    } else if (state->flashMode == LIGHT_FLASH_NONE) {
-        g_attention = 0;
-    }
+    g_attention = *state;    
     handle_speaker_battery_locked(dev);
     pthread_mutex_unlock(&g_lock);
     return 0;
 }
 
 static int
-set_light_battery(struct light_device_t* dev,
+set_light_buttons(struct light_device_t* dev,
         struct light_state_t const* state)
 {
+    int err = 0;
+    if(!dev) {
+        return -1;
+    }
     pthread_mutex_lock(&g_lock);
-    g_battery = *state;
-    handle_speaker_battery_locked(dev);
+    err = write_int(BUTTON_FILE, state->color & 0xFF);
+    err = write_int(BUTTON_FILE1, state->color & 0xFF);
     pthread_mutex_unlock(&g_lock);
-    return 0;
+    return err;
 }
 
 /** Close the lights device */
@@ -345,12 +346,12 @@ static int open_lights(const struct hw_module_t* module, char const* name,
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
-    else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
-        set_light = set_light_buttons;
-    else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
-        set_light = set_light_notifications;
     else if (0 == strcmp(LIGHT_ID_BATTERY, name))
         set_light = set_light_battery;
+    else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
+        set_light = set_light_notifications;
+    else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
+        set_light = set_light_buttons;
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name))
         set_light = set_light_attention;
     else
@@ -387,7 +388,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "libra lights module",
-    .author = "Google, Inc., CyanogenMod",
+    .name = "lights Module",
+    .author = "Google, Inc.",
     .methods = &lights_module_methods,
 };
