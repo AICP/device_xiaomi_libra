@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+    <style name="AppTheme" parent="@android:style/Theme.Material.Settings">
         <!-- Customize your theme here. -->
     </style>
 
