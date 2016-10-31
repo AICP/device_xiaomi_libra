@@ -353,7 +353,6 @@ service qti /system/vendor/bin/qti
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio system
     group radio system wakelock
     writepid /dev/cpuset/system-background/tasks
 
