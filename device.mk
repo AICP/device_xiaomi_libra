@@ -150,9 +150,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ExtraSettings
 
-# for off charging mode
-WITH_CM_CHARGER := false
-
 PRODUCT_PACKAGES += \
     charger_res_images \
     libhealthd.qcom
