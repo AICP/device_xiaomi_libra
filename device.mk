@@ -187,7 +187,14 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     audio_policy.msm8992 \
-    tinymix
+    audio_amplifier.msm8992
+
+# some extra tools
+PRODUCT_PACKAGES += \
+    tinycap \
+    tinymix \
+    tinypcminfo \
+    tinyplay
 
 # Audio effects
 PRODUCT_PACKAGES += \
