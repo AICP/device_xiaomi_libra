@@ -101,4 +101,14 @@
     <string name="increasing_ring_min_volume_title">Начальная громкость</string>
     <string name="increasing_ring_ramp_up_time_title">Время увеличения</string>
 
+    <!-- MSIM SIM status -->
+    <string name="sim_card_status_title">Статус SIM %d</string>
+    <string name="sim_card_lock_settings_title">Параметры блокировки SIM %d</string>
+    <string name="sim_card_summary_empty">SIM не вставлена</string>
+    <string name="sim_mobile_network_settings_category_title">Настройки мобильной сети</string>
+    <string name="sim_mobile_network_settings_title">Параметры SIM %d</string>
+
+    <!-- Volume settings - Volume adjustment sound -->
+    <string name="volume_adjust_sounds_title">Звук при регулировке громкости</string>
+
 </resources>
