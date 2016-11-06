@@ -101,6 +101,17 @@
     <string name="increasing_ring_min_volume_title">Початкова гучність</string>
     <string name="increasing_ring_ramp_up_time_title">Час збільшення</string>
 
+    <!-- Notification sound timeout -->
+    <string name="app_notification_sound_timeout_title">Мінімальний інтервал між сповіщеннями</string>
+    <string name="app_notification_sound_timeout_summary_template">Використовувати звук або вібрацію один раз в <xliff:g id="duration">%1$s</xliff:g></string>
+    <string name="app_notification_sound_timeout_value_none">без обмежень</string>
+    <string name="app_notification_sound_timeout_value_10_seconds">10 секунд</string>
+    <string name="app_notification_sound_timeout_value_30_seconds">30 секунд</string>
+    <string name="app_notification_sound_timeout_value_1_minute">1 хвилину</string>
+    <string name="app_notification_sound_timeout_value_5_minutes">5 хвилин</string>
+    <string name="app_notification_sound_timeout_value_15_minutes">10 хвилин</string>
+    <string name="app_notification_sound_timeout_value_30_minutes">30 хвилин</string>
+
     <!-- MSIM SIM status -->
     <string name="sim_card_status_title">Статус SIM %d</string>
     <string name="sim_card_lock_settings_title">Налаштування блокування SIM %d</string>
