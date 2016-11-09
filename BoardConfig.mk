@@ -27,6 +27,11 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
+# SDClang
+SDCLANG := true
+TARGET_USE_SDCLANG := true
+SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+
 ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
