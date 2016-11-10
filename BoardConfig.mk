@@ -221,7 +221,6 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/xiaomi/libra/power/power_ext.c
 TARGET_POWERHAL_VARIANT := qcom
 
 # Sensors
