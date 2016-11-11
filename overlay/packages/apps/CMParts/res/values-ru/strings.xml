@@ -23,7 +23,7 @@
     <string name="dlg_ok">ОК</string>
     <string name="cancel">Отмена</string>
     <string name="add">Добавить</string>
-    <string name="choose_app">Виберите программу</string>
+    <string name="choose_app">Выберите программу</string>
     <string name="reset">Сброс</string>
     <string name="advanced">Дополнительно</string>
     <string name="settings">Настройки</string>
@@ -54,7 +54,7 @@
     <string name="privacy_guard_help_title">Справка</string>
     <string name="privacy_guard_reset_title">Сброс</string>
     <string name="privacy_guard_reset_text">Сбросить разрешения?</string>
-    <string name="privacy_guard_help_text">Выберите, для каких приложений будет включен Менеджер защиты. Выбранные приложения не будут иметь доступа к личным данным, вроде контактов, сообщений, местоположения или журнала звонков. Долгое нажатие на пункт позволяет установить индивидуальные разрешения для приложения.\n\nПо умолчанию показываются только пользовательские приложения. Для показа предустановленных или фильтрации имеющих критичные разрешения приложений выбирайте сооветствующие пункты меню.</string>
+    <string name="privacy_guard_help_text">Выберите, для каких приложений будет включен Менеджер защиты. Выбранные приложения не будут иметь доступа к личным данным, вроде контактов, сообщений, местоположения или журнала звонков. Долгое нажатие на пункт позволяет установить индивидуальные разрешения для приложения.\n\nПо умолчанию показываются только пользовательские приложения. Для показа предустановленных или фильтрации имеющих критичные разрешения приложений выбирайте соответствующие пункты меню.</string>
     <string name="privacy_guard_manager_show_system_apps">Показывать предустановленные приложения</string>
     <string name="privacy_guard_advanced_settings_title">Дополнительно</string>
     <string name="privacy_guard_notification_title">Уведомление</string>
@@ -243,7 +243,7 @@
     <string name="camera_double_tap_power_gesture_title">Запуск камеры двойным нажатием кнопки питания</string>
 
     <!-- Description of setting that controls gesture to open camera by double tapping the power button [CHAR LIMIT=NONE] -->
-    <string name="camera_double_tap_power_gesture_desc">"Быстро запускайте камеру, без разблокировки экрана</string>
+    <string name="camera_double_tap_power_gesture_desc">Быстро запускайте камеру, без разблокировки экрана</string>
 
     <!-- Profiles -->
     <string name="profile_menu_delete_title">Удалить</string>
@@ -539,7 +539,7 @@
     <string name="auto_power_save_summary_on">Автоматически включать режим энергосбережения при проценте батареи %d </string>
     <string name="auto_power_save_summary_off">Не включать режим энергосбережения автоматически</string>
     <string name="app_perf_profiles_title">Автоматическая оптимизация</string>
-    <string name="app_perf_profiles_summary">Автоматический вибор соответствующего профеля производительности для приложений и режимов использования</string>
+    <string name="app_perf_profiles_summary">Автоматический выбор соответствующего профиля производительности для приложений и режимов использования</string>
 
     <!-- Applications: Expanded desktop -->
     <string name="expanded_desktop_settings_title">Расширенный экран</string>
