@@ -47,6 +47,7 @@ bin/ims_rtp_daemon
 bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
+bin/ipacm-diag
 bin/loc_launcher
 bin/location-mq
 bin/nl_listener

@@ -227,6 +227,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     xiaomi_hwaddrs
 
+# IPA Manager
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8992 \
