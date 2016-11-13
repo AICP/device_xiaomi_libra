@@ -37,4 +37,9 @@
     <string name="forward_lookup_provider_title">Постачальник прямого пошуку</string>
     <string name="people_lookup_provider_title">Постачальник пошуку даних про людей</string>
     <string name="reverse_lookup_provider_title">Постачальник зворотного пошуку</string>
+
+    <string name="call_recording_category_title">Запис виклику</string>
+    <string name="call_recording_format">Формат аудіо</string>
+    <string name="call_playback_no_app_found_toast">Не знайдено додаток, який може відтворити вибраний запис.</string>
+
 </resources>

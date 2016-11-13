@@ -37,4 +37,9 @@
     <string name="forward_lookup_provider_title">Поставщик прямого поиска</string>
     <string name="people_lookup_provider_title">Поставщик поиска данных о людях</string>
     <string name="reverse_lookup_provider_title">Поставщик обратного просмотра</string>
+
+    <string name="call_recording_category_title">Запись вызова</string>
+    <string name="call_recording_format">Формат аудио</string>
+    <string name="call_playback_no_app_found_toast">Не найдено приложение, которое может воспроизвести выбранную запись.</string>
+
 </resources>
