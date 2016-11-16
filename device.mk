@@ -137,6 +137,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
+# First api level, device has been commercially launched
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=22
+
 # Gello
 PRODUCT_PACKAGES += \
     Gello
