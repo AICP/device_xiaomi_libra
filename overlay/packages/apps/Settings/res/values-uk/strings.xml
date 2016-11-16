@@ -20,4 +20,6 @@
 
     <string name="profiles_settings_title">Системні профілі</string>
 
+    <string name="storage_settings">Сховище</string>
+
 </resources>
