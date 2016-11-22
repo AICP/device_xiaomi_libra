@@ -122,4 +122,9 @@
     <!-- Volume settings - Volume adjustment sound -->
     <string name="volume_adjust_sounds_title">Звуки регулювання гучності</string>
 
+    <!-- About phone screen, Device model -->
+    <string name="device_model">Модель пристрою</string>
+    <!-- About phone screen, Device name -->
+    <string name="device_name">Назва пристрою</string>
+
 </resources>
