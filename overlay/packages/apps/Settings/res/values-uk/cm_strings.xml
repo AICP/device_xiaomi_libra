@@ -127,4 +127,11 @@
     <!-- About phone screen, Device name -->
     <string name="device_name">Назва пристрою</string>
 
+    <string name="app_ops_labels_run_in_background">Працювати в фоні</string>
+    <string name="app_ops_labels_start_at_boot">Запуск при завантаженні</string>
+    <string name="app_ops_labels_toggle_wifi">Вмик./Вимик. Wi-Fi</string>
+    <string name="app_ops_labels_toggle_nfc">Вмик./Вимик. NFC</string>
+    <string name="app_ops_labels_toggle_mobile_data">Вмик./Вимик. мобільного інтернету</string>
+    <string name="app_ops_labels_toggle_bluetooth">Вмик./Вимик. bluetooth</string>
+
 </resources>
