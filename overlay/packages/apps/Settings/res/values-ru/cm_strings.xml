@@ -134,4 +134,10 @@
     <string name="app_ops_labels_toggle_mobile_data">Вкл./Откл. мобильного интернета</string>
     <string name="app_ops_labels_toggle_bluetooth">Вкл./Откл. bluetooth</string>
 
+    <!-- Allow vibration in zen mode -->
+    <string name="zen_mode_vibration">Вибрация</string>
+    <string name="zen_mode_vibration_never">Не вибрировать</string>
+    <string name="zen_mode_vibration_calls_only">Вибрировать только при вызовах</string>
+    <string name="zen_mode_vibration_calls_and_notifications">Вибрировать при вызовах и уведомлениях</string>
+
 </resources>
