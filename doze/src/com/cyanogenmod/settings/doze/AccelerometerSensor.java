@@ -32,7 +32,6 @@ public class AccelerometerSensor implements SensorEventListener {
 
     private static final int SENSOR_WAKELOCK_DURATION = 200;
     private static final int BATCH_LATENCY_IN_MS = 100;
-    private static final int MIN_PULSE_INTERVAL_MS = 2500;
     private static final int ACCELERATION_FORCE_Y_MIN = 5;
 
     private PowerManager mPowerManager;
