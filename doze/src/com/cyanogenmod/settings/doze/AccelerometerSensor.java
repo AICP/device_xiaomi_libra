@@ -23,17 +23,17 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
-import android.os.SystemClock;
 import android.util.Log;
 
-public class TiltSensor implements SensorEventListener {
+public class AccelerometerSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "TiltSensor";
+    private static final String TAG = "AccelerometerSensor";
 
     private static final int SENSOR_WAKELOCK_DURATION = 200;
     private static final int BATCH_LATENCY_IN_MS = 100;
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
+    private static final int ACCELERATION_FORCE_Y_MIN = 5;
 
     private PowerManager mPowerManager;
     private SensorManager mSensorManager;
@@ -41,29 +41,20 @@ public class TiltSensor implements SensorEventListener {
     private WakeLock mSensorWakeLock;
     private Context mContext;
 
-    private long mEntryTimestamp;
-
-    public TiltSensor(Context context) {
+    public AccelerometerSensor(Context context) {
         mContext = context;
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
         mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
+        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mSensorWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 "SensorWakeLock");
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
+        if (DEBUG) Log.d(TAG, "Got sensor event: y = " + event.values[1]);
 
-        long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
-        if (delta < MIN_PULSE_INTERVAL_MS) {
-            return;
-        } else {
-            mEntryTimestamp = SystemClock.elapsedRealtime();
-        }
-
-        if (event.values[0] == 1) {
+        if (event.values[1] > ACCELERATION_FORCE_Y_MIN) {
             Utils.launchDozePulse(mContext);
         }
     }
@@ -77,7 +68,6 @@ public class TiltSensor implements SensorEventListener {
         if (DEBUG) Log.d(TAG, "Enabling");
         mSensorManager.registerListener(this, mSensor,
                 SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000);
-        mEntryTimestamp = SystemClock.elapsedRealtime();
     }
 
     protected void disable() {
