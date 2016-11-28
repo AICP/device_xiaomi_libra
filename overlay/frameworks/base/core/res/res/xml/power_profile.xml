@@ -40,6 +40,7 @@
     <!-- Different CPU speeds as reported in
          /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
     <array name="cpu.speeds.cluster0">
+        <value>302400</value> <!-- 302.4 MHz CPU speed -->
         <value>384000</value> <!-- 384 MHz CPU speed -->
         <value>460800</value> <!-- 460.8 MHz CPU speed -->
         <value>600000</value> <!-- 600 MHz CPU speed -->
@@ -51,6 +52,7 @@
         <value>1440000</value> <!-- 1440 MHz CPU speed -->
     </array>
     <array name="cpu.speeds.cluster1">
+        <value>302400</value> <!-- 302.4 MHz CPU speed -->
         <value>384000</value> <!-- 384 MHz CPU speed -->
         <value>480000</value> <!-- 480 MHz CPU speed -->
         <value>633600</value> <!-- 633.6 MHz CPU speed -->
@@ -70,6 +72,7 @@
     <item name="cpu.awake">17.4</item>
     <!-- Power consumption at different speeds -->
     <array name="cpu.active.cluster0">
+        <value>18.25</value> <!-- 302.4 MHz CPU speed -->
         <value>18.25</value> <!-- 384 MHz CPU speed -->
         <value>24.35</value> <!-- 460.8 MHz CPU speed -->
         <value>26.92</value> <!-- 600 MHz CPU speed -->
@@ -81,6 +84,7 @@
         <value>105.87</value> <!-- 1440 MHz CPU speed -->
     </array>
     <array name="cpu.active.cluster1">
+        <value>0</value> <!-- 302.4 MHz CPU speed -->
         <value>0</value> <!-- 384 MHz CPU speed -->
         <value>0</value> <!-- 480 MHz CPU speed -->
         <value>105.87</value> <!-- 633.6 MHz CPU speed -->
