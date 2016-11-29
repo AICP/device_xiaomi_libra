@@ -30,4 +30,24 @@
     <!-- ADB notification message-->
     <string name="adb_active_generic_notification_message">Торкніться, щоб вимкнути налагодження.</string>
 
+    <!-- Restart menu -->
+    <!-- Button to restart the phone, within the Restart Options dialog -->
+    <string name="reboot_reboot">Перезавантаження</string>
+    <!-- Button to restart the phone into recovery, within the Restart Options dialog -->
+    <string name="reboot_recovery">Режим відновлення</string>
+    <!-- Button to restart the phone into bootloader, within the Restart Options dialog -->
+    <string name="reboot_bootloader">Завантажувач</string>
+    <!-- Button to restart the phone into download, within the Restart Options dialog -->
+    <string name="reboot_download">Режим оновлення ПЗ</string>
+    <!-- Button to soft restart the device, within the Restart Options dialog -->
+    <string name="reboot_soft">Перезапуск інтерфейсу</string>
+    <!-- Title of dialog to confirm restarting. -->
+    <string name="reboot_title">Перезавантаження</string>
+    <!-- Restart Confirmation Dialog.  When the user chooses to restart the device, there will
+         be a confirmation dialog.  This is the message. -->
+    <string name="reboot_confirm" product="tablet">Ваш планшет буде перезавантажений.</string>
+    <string name="reboot_confirm" product="default">Ваш телефон буде перезавантажений.</string>
+    <!-- Restart Progress Dialog. This is shown if the user chooses to restart the phone. -->
+    <string name="reboot_progress">Перезавантаження\u2026</string>
+
 </resources>
