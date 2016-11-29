@@ -140,4 +140,7 @@
     <string name="zen_mode_vibration_calls_only">Вібрувати тільки при викликах</string>
     <string name="zen_mode_vibration_calls_and_notifications">Вібрувати при викликах і сповіщеннях</string>
 
+    <!-- Notification importance -->
+    <string name="tuner_full_importance_settings">Розширені налаштування сповіщень</string>
+
 </resources>
