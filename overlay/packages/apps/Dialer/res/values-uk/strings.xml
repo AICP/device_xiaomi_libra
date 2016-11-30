@@ -37,4 +37,6 @@
 
     <string name="no">Ні</string>
 
+    <string name="calllog_search_hint">"Шукати в журналі дзвінків"</string>
+
 </resources>

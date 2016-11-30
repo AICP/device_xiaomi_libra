@@ -37,4 +37,6 @@
 
     <string name="no">Нет</string>
 
+    <string name="calllog_search_hint">"Искать в журнале вызовов"</string>
+
 </resources>
