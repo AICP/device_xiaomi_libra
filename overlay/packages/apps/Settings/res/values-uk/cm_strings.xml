@@ -143,4 +143,15 @@
     <!-- Notification importance -->
     <string name="tuner_full_importance_settings">Розширені налаштування сповіщень</string>
 
+    <!-- Tethering & portable hotspot other category -->
+    <string name="tethering_other_category_text">Інше</string>
+    <!-- Wi-Fi tethering inactivity timeout -->
+    <string name="hotstpot_inactivity_timeout_text">Вимикати невикористовувану точку доступу Wi\u2011Fi через:</string>
+    <string name="hotstpot_inactivity_timeout_never">Ніколи</string>
+    <string name="hotstpot_inactivity_timeout_1_minute">1 хвилину</string>
+    <string name="hotstpot_inactivity_timeout_5_minutes">5 хвилин</string>
+    <string name="hotstpot_inactivity_timeout_10_minutes">10 хвилин</string>
+    <string name="hotstpot_inactivity_timeout_never_summary_text">Не вимикати</string>
+    <string name="hotstpot_inactivity_timeout_summary_text">Вимикати через <xliff:g id="timeout">%1$s</xliff:g></string>
+
 </resources>
