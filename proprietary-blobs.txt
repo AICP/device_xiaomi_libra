@@ -68,26 +68,18 @@ etc/qcril.db
 etc/sap.conf
 etc/sysconfig/whitelist_com.android.omadm.service.xml
 lib/hw/consumerir.msm8992.so
-lib/hw/gps.msm8992.so
 lib/hw/local_time.default.so
 lib/libdmengine.so
 lib/libdmjavaplugin.so
-lib/libgps.utils.so
 lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
 lib/libloc_api_v02.so
-lib/libloc_core.so
 lib/libloc_ds_api.so
-lib/libloc_eng.so
 lib64/hw/consumerir.msm8992.so
-lib64/hw/gps.msm8992.so
-lib64/libgps.utils.so
 lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
 lib64/libloc_api_v02.so
-lib64/libloc_core.so
 lib64/libloc_ds_api.so
-lib64/libloc_eng.so
 
 vendor/bin/qseecomd
 vendor/bin/qti
