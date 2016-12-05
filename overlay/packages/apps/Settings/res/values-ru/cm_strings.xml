@@ -154,4 +154,9 @@
     <string name="hotstpot_inactivity_timeout_never_summary_text">Не отключать</string>
     <string name="hotstpot_inactivity_timeout_summary_text">Отключать через <xliff:g id="timeout">%1$s</xliff:g></string>
 
+    <!-- Vibrator intensity -->
+    <string name="vibrator_intensity_title">Интенсивность вибрации</string>
+    <string name="vibrator_intensity_dialog_warning">Значение выше %1$d%% не рекомендуется</string>
+    <string name="vibrator_intensity_dialog_reset">Сбросить</string>
+
 </resources>
