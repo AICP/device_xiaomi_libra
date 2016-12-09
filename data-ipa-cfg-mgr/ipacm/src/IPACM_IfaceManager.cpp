@@ -245,17 +245,12 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 #endif
 				IPACM_EvtDispatcher::registr(IPA_CFG_CHANGE_EVENT, lan); 				// register for IPA_CFG_CHANGE event
 				IPACM_EvtDispatcher::registr(IPA_PRIVATE_SUBNET_CHANGE_EVENT, lan); 	// register for IPA_PRIVATE_SUBNET_CHANGE_EVENT event
-#ifdef FEATURE_ETH_BRIDGE_LE
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_CLIENT_ADD_EVENT, lan);
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_CLIENT_DEL_EVENT, lan);
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_HDR_PROC_CTX_SET_EVENT, lan);
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_HDR_PROC_CTX_UNSET_EVENT, lan);
-#endif
 #ifdef FEATURE_IPA_ANDROID
 				IPACM_EvtDispatcher::registr(IPA_TETHERING_STATS_UPDATE_EVENT, lan);
 #endif
 				IPACM_EvtDispatcher::registr(IPA_CRADLE_WAN_MODE_SWITCH, lan);
 				IPACM_EvtDispatcher::registr(IPA_LINK_DOWN_EVENT, lan);
+				/* IPA_LAN_DELETE_SELF should be always last */
 				IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, lan);
 				IPACMDBG_H("ipa_LAN (%s):ipa_index (%d) instance open/registr ok\n", lan->dev_name, lan->ipa_if_num);
 				registr(ipa_interface_index, lan);
@@ -278,6 +273,7 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 				IPACM_EvtDispatcher::registr(IPA_HANDLE_WAN_DOWN_V6, ETH);
 				IPACM_EvtDispatcher::registr(IPA_CRADLE_WAN_MODE_SWITCH, ETH);
 				IPACM_EvtDispatcher::registr(IPA_LINK_DOWN_EVENT, ETH);
+				/* IPA_LAN_DELETE_SELF should be always last */
 				IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, ETH);
 				IPACMDBG_H("ipa_LAN (%s):ipa_index (%d) instance open/registr ok\n", ETH->dev_name, ETH->ipa_if_num);
 				registr(ipa_interface_index, ETH);
@@ -301,14 +297,9 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 					IPACM_EvtDispatcher::registr(IPA_HANDLE_WAN_UP_V6, odu);
 					IPACM_EvtDispatcher::registr(IPA_HANDLE_WAN_DOWN, odu);
 					IPACM_EvtDispatcher::registr(IPA_HANDLE_WAN_DOWN_V6, odu);
-#ifdef FEATURE_ETH_BRIDGE_LE
-					IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_CLIENT_ADD_EVENT, odu);
-					IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_CLIENT_DEL_EVENT, odu);
-					IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_HDR_PROC_CTX_SET_EVENT, odu);
-					IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_HDR_PROC_CTX_UNSET_EVENT, odu);
-#endif
 					IPACM_EvtDispatcher::registr(IPA_CRADLE_WAN_MODE_SWITCH, odu);
 					IPACM_EvtDispatcher::registr(IPA_LINK_DOWN_EVENT, odu);
+					/* IPA_LAN_DELETE_SELF should be always last */
 					IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, odu);
 					IPACMDBG_H("ipa_LAN (%s):ipa_index (%d) instance open/registr ok\n", odu->dev_name, odu->ipa_if_num);
 					registr(ipa_interface_index, odu);
@@ -324,6 +315,7 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 					IPACM_EvtDispatcher::registr(IPA_SW_ROUTING_ENABLE, odu);
 					IPACM_EvtDispatcher::registr(IPA_SW_ROUTING_DISABLE, odu);
 					IPACM_EvtDispatcher::registr(IPA_LINK_DOWN_EVENT, odu);
+					/* IPA_LAN_DELETE_SELF should be always last */
 					IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, odu);
 					IPACMDBG_H("ipa_LAN (%s):ipa_index (%d) instance open/registr ok\n", odu->dev_name, odu->ipa_if_num);
 					registr(ipa_interface_index, odu);
@@ -360,25 +352,22 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 #endif
 				IPACM_EvtDispatcher::registr(IPA_PRIVATE_SUBNET_CHANGE_EVENT, wl); 	// register for IPA_PRIVATE_SUBNET_CHANGE_EVENT event
 #ifdef FEATURE_ETH_BRIDGE_LE
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_CLIENT_ADD_EVENT, wl);
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_CLIENT_DEL_EVENT, wl);
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_HDR_PROC_CTX_SET_EVENT, wl);
-				IPACM_EvtDispatcher::registr(IPA_ETH_BRIDGE_HDR_PROC_CTX_UNSET_EVENT, wl);
 				IPACM_EvtDispatcher::registr(IPA_CFG_CHANGE_EVENT, wl);
 #endif
 				IPACM_EvtDispatcher::registr(IPA_CRADLE_WAN_MODE_SWITCH, wl);
 				IPACM_EvtDispatcher::registr(IPA_WLAN_LINK_DOWN_EVENT, wl);
-				IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, wl);
 #ifndef FEATURE_IPA_ANDROID
 				IPACM_EvtDispatcher::registr(IPA_WLAN_SWITCH_TO_SCC, wl);
 				IPACM_EvtDispatcher::registr(IPA_WLAN_SWITCH_TO_MCC, wl);
 #else
 				IPACM_EvtDispatcher::registr(IPA_TETHERING_STATS_UPDATE_EVENT, wl);
 #endif
+				/* IPA_LAN_DELETE_SELF should be always last */
+				IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, wl);
 				IPACMDBG_H("ipa_WLAN (%s):ipa_index (%d) instance open/registr ok\n", wl->dev_name, wl->ipa_if_num);
 				registr(ipa_interface_index, wl);
 				/* solve the new_addr comes earlier issue */
-	                        IPACM_Iface::iface_addr_query(if_index);
+	            IPACM_Iface::iface_addr_query(if_index);
 			}
 			break;
 
@@ -417,7 +406,7 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 					if(is_sta_mode == WLAN_WAN)
 					{
 						IPACM_EvtDispatcher::registr(IPA_WLAN_LINK_DOWN_EVENT, w); // for STA mode
-#ifndef FEATURE_IPA_ANDROI
+#ifndef FEATURE_IPA_ANDROID
 						IPACM_EvtDispatcher::registr(IPA_WLAN_SWITCH_TO_SCC, w);
 						IPACM_EvtDispatcher::registr(IPA_WLAN_SWITCH_TO_MCC, w);
 #endif
