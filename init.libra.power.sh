@@ -68,7 +68,7 @@ write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "65 460800:7
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 39000
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 79000
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
-write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 302400
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
 
 # online CPU4
 write /sys/devices/system/cpu/cpu4/online 1
@@ -88,7 +88,7 @@ write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "70 960000:8
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 39000
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 79000
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif 1
-write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 302400
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 384000
 
 # restore A57's max
 copy /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
@@ -113,7 +113,6 @@ write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 4
 write /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster 1
 chown system:system /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 chown system:system /sys/devices/system/cpu/cpu4/core_ctl/max_cpus
-
 write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 0
 write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 0
 write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
@@ -150,3 +149,10 @@ get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
 
 # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
+
+# auo lcd color calibration                                               
+if cat /sys/class/graphics/fb0/msm_fb_panel_info |grep -wq panel_name=auo                         
+then                                                                        
+ echo 253 225 256 > /sys/devices/platform/kcal_ctrl.0/kcal                             
+ echo 1 > /sys/devices/platform/kcal_ctrl.0/kcal_enable            
+fi  

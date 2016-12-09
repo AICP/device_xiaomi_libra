@@ -27,11 +27,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
-# SDClang
-SDCLANG := true
-TARGET_USE_SDCLANG := true
-SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
-
 ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
@@ -40,12 +35,12 @@ TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := -2
-TARGET_KERNEL_SOURCE := kernel/xiaomi/libra
-TARGET_KERNEL_CONFIG := libra_user_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8992
+TARGET_KERNEL_CONFIG := ex_libra_defconfig
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9-kernel/bin
+#KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9-kernel/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
@@ -61,6 +56,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
+NEED_KERNEL_MODULE_ROOT := true
 BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/libra/mkbootimg.mk
 
 # Off charging mode
@@ -121,6 +117,8 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_AP  := "ap"
+WIFI_DRIVER_MODULE_PATH := "/lib/modules/wlan.ko"
+WIFI_DRIVER_MODULE_NAME := "wlan"
 
 BOARD_USES_SECURE_SERVICES := true
 

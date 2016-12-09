@@ -146,8 +146,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=22
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Gello
 
 # LibraDoze
 PRODUCT_PACKAGES += \
@@ -240,9 +240,9 @@ PRODUCT_PACKAGES += \
     xiaomi_hwaddrs
 
 # IPA Manager
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
+#PRODUCT_PACKAGES += \
+#    ipacm \
+#    IPACM_cfg.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -570,3 +570,5 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 $(call inherit-product-if-exists, hardware/qcom/msm8994/msm8992.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8994/msm8994-gpu-vendor.mk)
+# Call the proprietary setup
+$(call inherit-product-if-exists, vendor/xiaomi/libra/libra-vendor.mk)
