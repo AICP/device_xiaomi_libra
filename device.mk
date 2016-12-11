@@ -146,8 +146,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=22
 
 # Gello
-# PRODUCT_PACKAGES += \
-#    Gello
+ PRODUCT_PACKAGES += \
+    Gello
 
 # LibraDoze
 PRODUCT_PACKAGES += \
