@@ -146,7 +146,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=22
 
 # Gello
-#PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
 #    Gello
 
 # LibraDoze
@@ -240,9 +240,10 @@ PRODUCT_PACKAGES += \
     xiaomi_hwaddrs
 
 # IPA Manager
-#PRODUCT_PACKAGES += \
-#    ipacm \
-#    IPACM_cfg.xml
+PRODUCT_PACKAGES += \
+    ipacm \
+    ipacm-diag \
+    IPACM_cfg.xml
 
 # Camera
 PRODUCT_PACKAGES += \
