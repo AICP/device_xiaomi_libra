@@ -1,2 +1,6 @@
 # For touchscreen proc files
 allow init proc_touchscreen:file write;
+allow init debugfs:file write;
+allow init socket_device:sock_file create;
+allow init logd:dir getattr;
+allow init socket_device:sock_file { setattr unlink };

@@ -1,1 +1,3 @@
 allow mm-qcamerad system_data_file:dir w_dir_perms;
+allow mm-qcamerad mpctl_socket:sock_file write;
+allow mm-qcamerad perfd:unix_stream_socket connectto;

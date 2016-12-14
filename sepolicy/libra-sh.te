@@ -24,3 +24,5 @@ allow libra-sh vfat:dir { read open };
 allow libra-sh vfat:dir search;
 allow libra-sh vfat:file { read open };
 allow libra-sh vfat:file getattr;
+
+allow libra-sh rootfs:lnk_file getattr;

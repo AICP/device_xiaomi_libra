@@ -15,3 +15,6 @@ allow xiaomi_hwaddrs wifi_data_file:dir { search write add_name };
 allow xiaomi_hwaddrs wifi_data_file:file { write getattr open create };
 
 allow xiaomi_hwaddrs sysfs:file { read open };
+
+allow xiaomi_hwaddrs diag_device:chr_file { open read write ioctl };
+allow xiaomi_hwaddrs rootfs:lnk_file getattr;

@@ -1,4 +1,5 @@
 allow tee vfat:file { read open };
 allow tee vfat:file getattr;
+allow tee vfat:dir search;
 allow tee fingerprintd_data_file:dir rw_dir_perms;
 allow tee fingerprintd_data_file:file create_file_perms;

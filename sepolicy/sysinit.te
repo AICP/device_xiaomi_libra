@@ -1,3 +1,10 @@
 # For touchscreen proc files
 allow sysinit proc_touchscreen:dir search;
 allow sysinit proc_touchscreen:file { write open };
+
+allow sysinit cache_file:dir getattr;
+allow sysinit proc:file { open read write getattr };
+allow sysinit proc_dirty_ratio:file { open read write getattr };
+allow sysinit rootfs:lnk_file getattr;
+allow sysinit system_data_file:file open;
+allow sysinit storage_file:dir getattr;

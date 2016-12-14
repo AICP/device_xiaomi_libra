@@ -30,5 +30,7 @@ allow init-power-sh sysfs:file { read open };
 allow init-power-sh sysfs:file getattr;
 allow init-power-sh sysfs:lnk_file getattr;
 allow init-power-sh rootfs:file { read open };
+allow init-power-sh rootfs:lnk_file getattr;
 allow init-power-sh rootfs:file getattr;
 allow init-power-sh sysfs:dir { read open };
+allow init-power-sh security_file:dir search;

@@ -1,0 +1,1 @@
+allow sudaemon power_service:service_manager find;

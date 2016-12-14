@@ -1,0 +1,4 @@
+allow zygote ashmem_device:chr_file execute;
+allow zygote self:process execmem;
+allow zygote system_server:binder { call transfer };
+allow zygote zygote_tmpfs:file execute;
