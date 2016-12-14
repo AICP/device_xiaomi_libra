@@ -364,7 +364,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
-    persist.metadata_dynfps.disable=true
+    persist.metadata_dynfps.disable=true \
+    video.accelerate.hw=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.enable.sglscale=1 \
