@@ -388,13 +388,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #    persist.service.adb.enable=1 \
 #    persist.service.debuggable=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.device.chipset='Qualcomm MSM8992 Snapdragon 808' \
+    ro.device.cpu='Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57)' \
+    ro.device.gpu='Adreno 418' \
+    ro.device.front_cam='13 MP, f/2.0, 24mm, phase detection autofocus, dual-LED (dual tone) flash' \
+    ro.device.rear_cam='5 MP, f/2.0, 1080p' \
+    ro.device.screen_res='1080 x 1920 pixels (~441 ppi pixel density)'
+
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.device.chipset="Qualcomm MSM8992 Snapdragon 808" \
-    ro.device.cpu="Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57)" \
-    ro.device.gpu="Adreno 418" \
-    ro.device.front_cam="13 MP, f/2.0, 24mm, phase detection autofocus, dual-LED (dual tone) flash" \
-    ro.device.rear_cam="5 MP, f/2.0, 1080p" \
-    ro.device.screen_res="1080 x 1920 pixels (~441 ppi pixel density)" \
     ro.adb.secure=0 \
     ro.secure=0 \
     ro.allow.mock.location=1 \
