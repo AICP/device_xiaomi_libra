@@ -191,7 +191,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.libra
 
-TARGET_RECOVERY_FSTAB = device/xiaomi/libra/fstab.libra
+TARGET_RECOVERY_FSTAB = device/xiaomi/libra/rootdir/fstab.libra
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/libra/releasetools
 
