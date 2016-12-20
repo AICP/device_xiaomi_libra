@@ -10,6 +10,11 @@
 	"branch": "ng7.1-aicp"
   },
   {
+        "repository": "reposte/platform_hardware_qcom_msm8994",
+        "target_path": "hardware/qcom/msm8994",
+        "branch": "ng7.1"
+  },
+  {
         "repository": "CyanogenMod/android_device_qcom_common",
         "target_path": "device/qcom/common",
 	"branch": "cm-14.1"
