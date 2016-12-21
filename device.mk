@@ -19,22 +19,14 @@
 #
 # Everything in this directory will become public
 
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/rootdir/init.libra.rc:root/init.libra.rc \
-    device/xiaomi/libra/rootdir/init.aqua.rc:root/init.aqua.rc \
-    device/xiaomi/libra/rootdir/init.recovery.libra.rc:root/init.recovery.libra.rc \
-    device/xiaomi/libra/rootdir/init.libra.usb.rc:root/init.libra.usb.rc \
-    device/xiaomi/libra/rootdir/fstab.libra:root/fstab.libra \
-    device/xiaomi/libra/rootdir/ueventd.libra.rc:root/ueventd.libra.rc \
-    device/xiaomi/libra/rootdir/init.libra.ramdump.rc:root/init.libra.ramdump.rc
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    device/xiaomi/libra/config/media_codecs.xml:system/etc/media_codecs.xml \
-    device/xiaomi/libra/config/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/xiaomi/libra/config/media_profiles.xml:system/etc/media_profiles.xml
+    device/xiaomi/libra/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/xiaomi/libra/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/xiaomi/libra/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -93,13 +85,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
 
-# For SPN display
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/config/spn-conf.xml:system/etc/spn-conf.xml
-
 # For GPS
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/config/sec_config:system/etc/sec_config
+    device/xiaomi/libra/configs/sec_config:system/etc/sec_config
 
 # For WiFi
 PRODUCT_COPY_FILES += \
@@ -116,19 +104,11 @@ PRODUCT_COPY_FILES += \
 
 # Thermal engine
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/config/thermal-engine-8992.conf:system/etc/thermal-engine-8992.conf
+    device/xiaomi/libra/configs/thermal-engine-8992.conf:system/etc/thermal-engine-8992.conf
 
 # MSM IRQ balance
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/config/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
-
-# Power configuration file
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/rootdir/bin/init.libra.power.sh:system/bin/init.libra.power.sh
-
-# MBN
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/rootdir/bin/init.libra.sh:system/bin/init.libra.sh
+    device/xiaomi/libra/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
 
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/releasetools/device_check.sh:install/bin/device_check.sh
@@ -136,6 +116,21 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
+# Init
+PRODUCT_PACKAGES += \
+    init.qcom.power.sh \
+    fstab.qcom \
+    init.aqua.rc \
+    init.qcom.diag.rc \
+    init.qcom.misc.rc \
+    init.qcom.ramdump.rc \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
+
+# Display
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
@@ -174,7 +169,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8992 \
     hwcomposer.msm8992 \
     memtrack.msm8992 \
-    lights.libra \
+    lights.msm8992 \
     liboverlay \
     libtinyxml
 
@@ -224,7 +219,7 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/config/gps.conf:system/etc/gps.conf
+    device/xiaomi/libra/configs/gps.conf:system/etc/gps.conf
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
@@ -267,7 +262,7 @@ PRODUCT_PACKAGES += \
 
 # Multi HAL configuration file
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/config/hals.conf:system/etc/sensors/hals.conf
+    device/xiaomi/libra/configs/hals.conf:system/etc/sensors/hals.conf
 
 # Build stlport for legacy blobs
 PRODUCT_PACKAGES += \
@@ -380,14 +375,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.mdpcomp_perfhint=50 \
     persist.sys.wfd.virtual=0 \
     ro.qualcomm.cabl=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.device.chipset=Qualcomm MSM8992 Snapdragon 808 \
-    ro.device.cpu=Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57) \
-    ro.device.gpu=Adreno 418 \
-    ro.device.front_cam=13 MP \
-    ro.device.rear_cam=5 MP \
-    ro.device.screen_res=1080 x 1920 (~441 ppi pixel density)
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
@@ -556,14 +543,6 @@ PRODUCT_PACKAGES += \
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
     QXDMLogger
-
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/rootdir/init.libra.diag.rc.userdebug:root/init.libra.diag.rc \
-    device/xiaomi/libra/rootdir/init.libra.misc.rc.userdebug:root/init.libra.misc.rc
-else
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/rootdir/init.libra.diag.rc.user:root/init.libra.diag.rc \
-    device/xiaomi/libra/rootdir/init.libra.misc.rc.user:root/init.libra.misc.rc
 endif
 
 # setup dalvik vm configs.

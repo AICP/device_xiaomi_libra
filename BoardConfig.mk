@@ -52,7 +52,7 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=libra boot_cpus=0-5
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom boot_cpus=0-5
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 msm_poweroff.download_mode=0
 #BOARD_KERNEL_CMDLINE += synaptics_dsx.startup_fw_update=1
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -61,6 +61,9 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 
 NEED_KERNEL_MODULE_ROOT := true
 BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/libra/mkbootimg.mk
+
+# Lights
+ TARGET_PROVIDES_LIBLIGHT := true
 
 # Off charging mode
 WITH_CM_CHARGER := false
@@ -141,7 +144,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno418
 TARGET_BOARD_INFO_FILE := device/xiaomi/libra/board-info.txt
 TARGET_NO_RPC := true
 
-BOARD_EGL_CFG := device/xiaomi/libra/config/egl.cfg
+BOARD_EGL_CFG := device/xiaomi/libra/configs/egl.cfg
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
@@ -189,9 +192,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.libra
-
-TARGET_RECOVERY_FSTAB = device/xiaomi/libra/rootdir/fstab.libra
+TARGET_RECOVERY_FSTAB = device/xiaomi/libra/rootdir/fstab.qcom
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/libra/releasetools
 
@@ -208,7 +209,6 @@ BOARD_SEPOLICY_DIRS += \
 
 TARGET_USES_64_BIT_BINDER := true
 
-TARGET_USES_AOSP := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Boot animation

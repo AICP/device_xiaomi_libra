@@ -30,7 +30,7 @@ LOCAL_SRC_FILES := lights.c
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_CFLAGS := $(common_flags) -DLOG_TAG=\"qdlights\"
-LOCAL_MODULE := lights.libra
+LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)

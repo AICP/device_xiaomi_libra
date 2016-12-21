@@ -71,7 +71,7 @@ write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
 
 # online CPU4
-write /sys/devices/system/cpu/cpu4/online 1
+write /sys/devices/system/cpu/cpu4/online 0
 restorecon -R /sys/devices/system/cpu # must restore after online
 
 # configure governor settings for big cluster

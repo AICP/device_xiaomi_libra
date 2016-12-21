@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-import init.libra.usb.rc
-import init.libra.diag.rc
-import init.libra.ramdump.rc
-import init.libra.misc.rc
+import init.qcom.usb.rc
+import init.qcom.diag.rc
+import init.qcom.ramdump.rc
+import init.qcom.misc.rc
 import init.aqua.rc
 
 on early-init
@@ -73,8 +73,8 @@ on init
     exec u:r:aqua:s0 root root -- /sbin/aqua -u
 
 on fs
-    mount_all ./fstab.libra
-    # swapon_all ./fstab.libra
+    mount_all ./fstab.qcom
+    # swapon_all ./fstab.qcom
 
     restorecon_recursive /persist
 
@@ -99,7 +99,7 @@ on boot
 
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
-    exec u:r:init-power-sh:s0 root root system -- /system/bin/init.libra.power.sh
+    exec u:r:init-power-sh:s0 root root system -- /system/bin/init.qcom.power.sh
 
     # update foreground cpuset now that processors are up
     # foreground gets all CPUs except CPU 3
@@ -536,7 +536,7 @@ service imscmservice /system/bin/imscmservice
     group radio net_raw diag log
     writepid /dev/cpuset/system-background/tasks
 
-service libra-sh /system/bin/init.libra.sh
+service qcom-sh /system/bin/init.qcom.sh
     class late_start
     user radio
     group system
