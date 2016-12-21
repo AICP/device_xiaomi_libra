@@ -104,7 +104,7 @@ write /sys/module/cpu_boost/parameters/input_boost_freq "0:787200"
 write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
 # Configure core_ctl
-write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 1
+write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 0
 write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 2
 write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 60
 write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
