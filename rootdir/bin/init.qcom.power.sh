@@ -71,8 +71,8 @@ write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
 
 # online CPU4
-write /sys/devices/system/cpu/cpu4/online 0
-restorecon -R /sys/devices/system/cpu # must restore after online
+#write /sys/devices/system/cpu/cpu4/online 0
+#restorecon -R /sys/devices/system/cpu # must restore after online
 
 # configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
@@ -94,7 +94,7 @@ write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 384000
 copy /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
 
 # plugin remaining A57s
-write /sys/devices/system/cpu/cpu5/online 1
+#write /sys/devices/system/cpu/cpu5/online 1
 
 # Restore CPU 4 max freq from msm_performance
 write /sys/module/msm_performance/parameters/cpu_max_freq "4:4294967295 5:4294967295"
