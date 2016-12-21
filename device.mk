@@ -381,20 +381,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.qualcomm.cabl=0
 
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.adb.secure=0 \
-#    ro.secure=0 \
-#    persist.sys.usb.config=mtp,adb \
-#    persist.service.adb.enable=1 \
-#    persist.service.debuggable=1
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.device.chipset=Qualcomm MSM8992 Snapdragon 808 \
     ro.device.cpu=Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57) \
     ro.device.gpu=Adreno 418 \
-    ro.device.front_cam=13 MP, f/2.0, 24mm, phase detection autofocus, dual-LED (dual tone) flash \
-    ro.device.rear_cam=5 MP, f/2.0, 1080p \
-    ro.device.screen_res=1080 x 1920 pixels (~441 ppi pixel density)
+    ro.device.front_cam=13 MP \
+    ro.device.rear_cam=5 MP \
+    ro.device.screen_res=1080 x 1920 (~441 ppi pixel density)
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
