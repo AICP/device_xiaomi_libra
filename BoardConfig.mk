@@ -31,9 +31,6 @@ ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
 
-# libra and aqua
-TARGET_OTA_ASSERT_DEVICE := libra,aqua
-
 # Inline kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true

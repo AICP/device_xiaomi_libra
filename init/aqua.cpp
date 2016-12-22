@@ -77,7 +77,7 @@ int main(int argc, char **argv)
         case 'u': /* update */
             i = get_variant();
             if (i == 1) {
-                update_fstab("/fstab.libra", aqua_line);
+                update_fstab("/fstab.qcom", aqua_line);
                 update_fstab("/etc/recovery.fstab", aqua_line);
             } else {
                 KLOG_ERROR(LOG_TAG, "Only aqua variant need fstab update\n");
