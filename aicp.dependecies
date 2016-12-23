@@ -1,18 +1,13 @@
 [
   {
 	"repository": "reposte/android_kernel_xiaomi_msm8992",
-	"target_path": "kernel/xiaomi/libra",
-	"branch": "ng7.1-exp"
+	"target_path": "kernel/xiaomi/msm8992",
+	"branch": "ng7.1"
   },
   {
 	"repository": "reposte/proprietary_vendor_xiaomi",
 	"target_path": "vendor/xiaomi",
 	"branch": "ng7.1-aicp"
-  },
-  {
-        "repository": "reposte/platform_hardware_qcom_msm8994",
-        "target_path": "hardware/qcom/msm8994",
-        "branch": "ng7.1"
   },
   {
         "repository": "CyanogenMod/android_device_qcom_common",
