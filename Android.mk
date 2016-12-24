@@ -155,12 +155,21 @@ $(DM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(DM_SYMLINKS)
 
-# Read WiFi MAC Address from persist partition
-$(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/qca_cld ; \
-	ln -sf /system/etc/wifi/WCNSS_qcom_cfg.ini \
-		$(TARGET_OUT_ETC)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini ; \
-        ln -sf /persist/wlan_mac.bin \
-                $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/wlan_mac.bin)
+WCNSS_INI_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+$(WCNSS_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS config ini link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/etc/wifi/$(notdir $@) $@
+
+WCNSS_MAC_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/wlan_mac.bin
+$(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS MAC bin link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /persist/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_MAC_SYMLINK)
 
 # For creating rfs symbolic link in system partition
 include device/xiaomi/libra/tftp.mk

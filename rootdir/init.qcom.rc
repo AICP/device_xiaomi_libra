@@ -549,18 +549,11 @@ service bugreport /system/bin/dumpstate -d -p -B \
     disabled
     oneshot
 
-service xiaomi_hwaddrs /system/bin/xiaomi_hwaddrs
-    class core
+service readmac /system/bin/readmac
+    class main
     user root
-    group system wifi
+    group root
     oneshot
-
-# Running hwaddrs under init is enforcing 0600, we need more
-on property:init.svc.xiaomi_hwaddrs=stopped
-    chmod 644 /data/misc/wifi/wlan_mac.bin
-    chown system wifi /data/misc/wifi/wlan_mac.bin
-    chmod 644 /data/misc/bluetooth/bdaddr.txt
-    chown bluetooth bluetooth /data/misc/bluetooth/bdaddr.txt
 
 service energy-awareness /system/bin/energy-awareness
     class main

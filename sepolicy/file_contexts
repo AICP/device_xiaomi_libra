@@ -18,7 +18,7 @@
 /system/bin/init\.qcom\.sh        u:object_r:qcom-sh_exec:s0
 /sbin/aqua                         u:object_r:aqua_exec:s0
 /system/bin/fingerprint\.sh        u:object_r:fingerprint-sh_exec:s0
-/system/bin/xiaomi_hwaddrs         u:object_r:xiaomi_hwaddrs_exec:s0
+/system/bin/readmac                u:object_r:readmac_exec:s0
 /vendor/bin/slim_daemon            u:object_r:location_exec:s0
 
 /sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
