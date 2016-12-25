@@ -21,7 +21,7 @@
   },
   {
         "repository": "CyanogenMod/android_external_stlport",
-        "target_path": "external/stlport"
+        "target_path": "external/stlport",
         "branch": "cm-14.1"
   }
 ]
