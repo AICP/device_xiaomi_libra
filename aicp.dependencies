@@ -5,23 +5,23 @@
         "branch": "cm-14.1"
   },
   {
-	"repository": "reposte/android_kernel_xiaomi_msm8992",
-	"target_path": "kernel/xiaomi/msm8992",
-	"branch": "ng7.1"
+        "repository": "reposte/android_kernel_xiaomi_msm8992",
+        "target_path": "kernel/xiaomi/msm8992",
+        "branch": "ng7.1"
   },
   {
-	"repository": "AICP/proprietary_vendor_xiaomi",
-	"target_path": "vendor/xiaomi",
-	"branch": "n7.1"
+        "repository": "AICP/proprietary_vendor_xiaomi",
+        "target_path": "vendor/xiaomi",
+        "branch": "n7.1"
   },
   {
-	"repository": "TheMuppets/proprietary_vendor_qcom_binaries",
-	"target_path": "vendor/qcom/binaries",
-	"branch": "cm-14.1"
+        "repository": "TheMuppets/proprietary_vendor_qcom_binaries",
+        "target_path": "vendor/qcom/binaries",
+        "branch": "cm-14.1"
   },
   {
-        "repository": "CyanogenMod/android_external_stlport",
-        "target_path": "external/stlport"
+       "repository": "CyanogenMod/android_external_stlport",
+        "target_path": "external/stlport",
         "branch": "cm-14.1"
   }
 ]
