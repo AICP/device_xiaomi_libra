@@ -1,6 +1,6 @@
 [
   {
-        "repository": "CyanogenMod/android_device_qcom_common",
+        "repository": "LineageOS/android_device_qcom_common",
         "target_path": "device/qcom/common",
         "branch": "cm-14.1"
   },
@@ -20,7 +20,7 @@
         "branch": "cm-14.1"
   },
   {
-       "repository": "CyanogenMod/android_external_stlport",
+       "repository": "LineageOS/android_external_stlport",
         "target_path": "external/stlport",
         "branch": "cm-14.1"
   }
