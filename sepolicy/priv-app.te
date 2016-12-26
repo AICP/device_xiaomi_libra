@@ -6,4 +6,4 @@ allow priv_app persist_file:dir search;
 allow priv_app rfs_system_file:dir { getattr open read };
 allow priv_app rfs_system_file:lnk_file { getattr read };
 allow priv_app tombstone_data_file:dir search;
-
+allow priv_app system_app_data_file:file write;
