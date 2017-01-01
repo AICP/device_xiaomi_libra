@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">縁のタッチ</string>
+
+    <!-- edge tap enable -->
+    <string name="pref_title_enable_etap">縁をダブルタッチして戻る</string>
+    <string name="pref_summary_enable_etap">縁をダブルタッチして前のページに戻るのをオンにする
+</string>
+
+    <string name="pref_header_extra">縁のタッチ</string>
+
+</resources>
