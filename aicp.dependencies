@@ -7,12 +7,12 @@
   {
         "repository": "reposte/android_kernel_xiaomi_msm8992",
         "target_path": "kernel/xiaomi/msm8992",
-        "branch": "ng7.1-exp"
+        "branch": "ng7.1-2017"
   },
   {
-        "repository": "AICP/proprietary_vendor_xiaomi",
+        "repository": "reposte/proprietary_vendor_xiaomi",
         "target_path": "vendor/xiaomi",
-        "branch": "n7.1"
+        "branch": "ng7.1-aicp"
   },
   {
         "repository": "TheMuppets/proprietary_vendor_qcom_binaries",
