@@ -629,15 +629,22 @@ vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
+bin/garden_app
+bin/gpsone_daemon
 bin/loc_launcher
 bin/location-mq
 bin/lowi-server
 bin/xtwifi-client
 bin/xtwifi-inet-agent
+etc/permissions/com.qti.location.sdk.xml
+etc/permissions/com.qualcomm.location.vzw_library.xml
+etc/permissions/com.qualcomm.location.xml
 etc/flp.conf
 etc/izat.conf
 etc/lowi.conf
 etc/xtwifi.conf
+framework/com.qti.location.sdk.jar
+framework/com.qualcomm.location.vzw_library.jar
 lib/hw/gps.default.so
 lib/libgps.utils.so
 lib/libloc_api_v02.so
@@ -650,8 +657,11 @@ lib64/libloc_api_v02.so
 lib64/libloc_core.so
 lib64/libloc_ds_api.so
 lib64/libloc_eng.so
+priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/slim_daemon
 vendor/lib/hw/flp.default.so
+vendor/lib/libalarmservice_jni.so
+vendor/lib/libdataitems.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
@@ -668,6 +678,8 @@ vendor/lib/libxtadapter.so
 vendor/lib/libxt_native.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib64/hw/flp.default.so
+vendor/lib64/libalarmservice_jni.so
+vendor/lib64/libdataitems.so
 vendor/lib64/libflp.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libizat_core.so
