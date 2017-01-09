@@ -10,9 +10,9 @@
         "branch": "ng7.1-2017"
   },
   {
-        "repository": "reposte/proprietary_vendor_xiaomi",
+        "repository": "AICP/proprietary_vendor_xiaomi",
         "target_path": "vendor/xiaomi",
-        "branch": "ng7.1-aicp"
+        "branch": "n7.1"
   },
   {
         "repository": "TheMuppets/proprietary_vendor_qcom_binaries",
