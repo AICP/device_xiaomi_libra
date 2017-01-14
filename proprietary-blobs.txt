@@ -211,6 +211,27 @@ vendor/lib64/libwms.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
 # Audio
+lib/soundfx/libfmas.so
+vendor/etc/diracmobile.config
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libaudcal.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+
+# Dirac
+lib/soundfx/libdirac.so
+lib/libDiracAPI_SHARED.so
+
+# Audio ACDB
 etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 etc/acdbdata/Forte/Forte_General_cal.acdb
 etc/acdbdata/Forte/Forte_Global_cal.acdb
@@ -218,25 +239,6 @@ etc/acdbdata/Forte/Forte_Handset_cal.acdb
 etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
 etc/acdbdata/Forte/Forte_Headset_cal.acdb
 etc/acdbdata/Forte/Forte_Speaker_cal.acdb
-lib/soundfx/libfmas.so
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-
-# Dirac mobile
-lib/libDiracAPI_SHARED.so
-lib/soundfx/libdirac.so
-vendor/etc/diracmobile.config
 
 lib/hw/camera.vendor.msm8992.so
 vendor/lib/libFaceProc.so
