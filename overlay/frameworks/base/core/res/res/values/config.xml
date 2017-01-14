@@ -415,4 +415,47 @@
         <item>"/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex"</item>
     </string-array>
 
+    <!-- Package name(s) containing location provider support.
+         These packages can contain services implementing location providers,
+         such as the Geocode Provider, Network Location Provider, and
+         Fused Location Provider. They will each be searched for
+         service components implementing these providers.
+         It is strongly recommended that the packages explicitly named
+         below are on the system image, so that they will not map to
+         a 3rd party application.
+         The location framework also has support for installation
+         of new location providers at run-time. The new package does not
+         have to be explicitly listed here, however it must have a signature
+         that matches the signature of at least one package on this list.
+         -->
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <item>org.microg.nlp</item>
+        <item>com.google.android.gms</item>
+        <item>com.android.location.fused</item>
+        <item>com.qualcomm.location</item>
+    </string-array>
+
+    <!-- Package name providing network location support. Used only when
+         config_enableNetworkLocationOverlay is false. -->
+    <string name="config_networkLocationProviderPackageName">com.qualcomm.location</string>
+
+    <!-- Package name providing fused location support. Used only when
+         config_enableFusedLocationOverlay is false. -->
+    <string name="config_fusedLocationProviderPackageName">com.qualcomm.location</string>
+
+    <!-- Package name providing Hardware Flp. Used only when
+         config_enableHardwareFlpOverlay is false. -->
+    <string name="config_hardwareFlpPackageName">com.android.location.fused</string>
+
+    <!-- Package name providing geocoder API support. Used only when
+         config_enableGeocoderOverlay is false. -->
+    <string name="config_geocoderProviderPackageName">com.qualcomm.location</string>
+
+    <!-- Package name providing geofence API support. Used only when
+         config_enableGeofenceOverlay is false. -->
+    <string name="config_geofenceProviderPackageName">com.qualcomm.location</string>
+
+    <!-- Component name of the combo network location provider. -->
+    <string name="config_comboNetworkLocationProvider">com.qualcomm.location</string>
+
 </resources>
