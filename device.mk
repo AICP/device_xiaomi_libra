@@ -215,7 +215,15 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/configs/gps.conf:system/etc/gps.conf
+    device/xiaomi/libra/gps/etc/flp.conf:system/etc/flp.conf \
+    device/xiaomi/libra/gps/etc/gps.conf:system/etc/gps.conf \
+    device/xiaomi/libra/gps/etc/izat.conf:system/etc/izat.conf \
+    device/xiaomi/libra/gps/etc/lowi.conf:system/etc/lowi.conf \
+    device/xiaomi/libra/gps/etc/sap.conf:system/etc/sap.conf \
+    device/xiaomi/libra/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+
+PRODUCT_PACKAGES += \
+    gps.msm8992
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
