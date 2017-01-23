@@ -458,4 +458,7 @@
     <!-- Component name of the combo network location provider. -->
     <string name="config_comboNetworkLocationProvider">com.qualcomm.location</string>
 
+    <!-- Enable blur support -->
+    <bool name="config_uiBlurEnabled">true</bool>
+
 </resources>
