@@ -44,7 +44,7 @@ static int get_variant()
         return -1;
     }
 
-    if (strstr(buf, "0x23")) {
+    if (strstr(buf, "0x230")) {
         return 0;
     } else /* if (strstr(buf, "0x34")) */ {
         return 1;
