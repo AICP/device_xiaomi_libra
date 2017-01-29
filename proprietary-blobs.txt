@@ -160,6 +160,7 @@ vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/rfsa/adsp/fastrpc_shell_0
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/activity_recognition.libra.so
+vendor/lib64/hw/flp.default.so
 vendor/lib64/hw/gatekeeper.msm8992.so
 vendor/lib64/libsensors.lsm6db0.so
 vendor/lib64/lib-dplmedia.so
@@ -211,6 +212,7 @@ vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
 # Audio
 lib/soundfx/libfmas.so
+vendor/etc/diracmobile.config
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -232,7 +234,6 @@ vendor/lib64/libaudioalsa.so
 # Dirac
 lib/soundfx/libdirac.so
 lib/libDiracAPI_SHARED.so
-vendor/etc/diracmobile.config
 
 # Audio ACDB
 etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
