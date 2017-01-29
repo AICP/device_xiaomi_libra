@@ -210,6 +210,7 @@ vendor/lib64/libwms.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
 # Audio
+lib/soundfx/libfmas.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
