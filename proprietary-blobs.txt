@@ -642,10 +642,7 @@ bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
-etc/permissions/izat.xt.srv.xml
-etc/cacert_location.pem
 etc/gps_diag.cfg
-etc/xtra_root_cert.pem
 framework/com.qti.location.sdk.jar
 framework/com.qualcomm.location.vzw_library.jar
 -lib/libloc_api_v02.so
