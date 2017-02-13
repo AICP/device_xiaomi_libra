@@ -3,6 +3,7 @@ allow priv_app configfs:dir { open read };
 allow priv_app device:dir { open read };
 allow priv_app mnt_media_rw_file:dir getattr;
 allow priv_app persist_file:dir search;
+allow priv_app persist_file:file getattr;
 allow priv_app rfs_system_file:dir { getattr open read };
 allow priv_app rfs_system_file:lnk_file { getattr read };
 allow priv_app tombstone_data_file:dir search;
