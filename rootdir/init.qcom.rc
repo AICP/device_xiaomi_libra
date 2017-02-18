@@ -236,9 +236,6 @@ on post-fs-data
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
 
-    # Create IPA daemon dir
-    mkdir /data/misc/ipa/ 0770 system net_admin
-
     write /sys/kernel/boot_adsp/boot 1
 
     #Update touch firmware if required
@@ -360,18 +357,6 @@ service qti /system/vendor/bin/qti
 service netmgrd /system/bin/netmgrd
     class main
     group radio system wakelock
-    writepid /dev/cpuset/system-background/tasks
-
-service ipacm-diag /system/bin/ipacm-diag
-    class main
-    user system
-    socket ipacm_log_file dgram 660 system net_admin
-    group net_admin qcom_diag
-
-service ipacm /system/bin/ipacm
-    class main
-    user net_admin
-    group net_admin inet
     writepid /dev/cpuset/system-background/tasks
 
 service per_mgr /system/bin/pm-service

@@ -234,12 +234,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     readmac
 
-# IPA Manager
-PRODUCT_PACKAGES += \
-    ipacm \
-    ipacm-diag \
-    IPACM_cfg.xml
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8992 \
