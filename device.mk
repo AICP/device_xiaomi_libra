@@ -102,6 +102,8 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/libra/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
     device/xiaomi/libra/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
+
+
 # Thermal engine
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/configs/thermal-engine-8992.conf:system/etc/thermal-engine-8992.conf
@@ -175,20 +177,27 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
+    libdashplayer \
     libstagefrighthw \
+    libstagefright_soft_flacdec \
+    libextmedia_jni \
     libOmxCore \
     libmm-omxcore \
     libOmxVdec \
     libOmxVdecHevc \
     libOmxVenc \
     libdivxdrmdecrypt \
+    libOmxVidcCommon \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxEvrcEnc \
-    libOmxQcelp13Enc
+    libOmxQcelp13Enc \
+    libOmxSwVencMpeg4 \
+    libOmxSwVencHevc 
 
 # Audio HAL and utilities
 PRODUCT_PACKAGES += \
+    audiod \
     audio.primary.msm8992 \
     audio.a2dp.default \
     audio.usb.default \
@@ -205,6 +214,7 @@ PRODUCT_PACKAGES += \
 
 # Audio effects
 PRODUCT_PACKAGES += \
+    libaudio-resampler \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
     libqcomvisualizer \
@@ -216,6 +226,19 @@ PRODUCT_PACKAGES += \
     libtinyxml2 \
     libxml2 \
     libprotobuf-cpp-full
+
+# Connectivity Engine support (CNE)
+PRODUCT_PACKAGES += \
+    cneapiclient \
+    com.quicinc.cne \
+    libcnefeatureconfig \
+    services-ext
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    make_ext4fs \
+    setup_fs
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
@@ -229,7 +252,10 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     libwpa_client \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
     hostapd \
+    dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf \
     readmac
@@ -276,6 +302,10 @@ PRODUCT_PACKAGES += \
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
    fs_config_files
+
+# USB
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
 
 # ANT+
 PRODUCT_COPY_FILES += \
