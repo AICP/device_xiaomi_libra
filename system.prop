@@ -28,6 +28,7 @@ ro.audio.flinger_standbytime_ms=300
 # WiFi
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=15
+persist.sys.wfd.nohdcp=1
 
 # Graphics
 ro.opengles.version=196610
