@@ -65,11 +65,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/libra/mkbootimg.mk
 # Off charging mode
 WITH_CM_CHARGER := false
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_libra
-TARGET_RECOVERY_DEVICE_MODULES := libinit_libra
-TARGET_UNIFIED_DEVICE := true
-
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 

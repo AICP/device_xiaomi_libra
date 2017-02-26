@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml \
@@ -112,9 +111,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/libra/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
 
-PRODUCT_COPY_FILES += \
-    device/xiaomi/libra/releasetools/device_check.sh:install/bin/device_check.sh
-	
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -122,14 +118,12 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
     init.qcom.power.sh \
     fstab.qcom \
-    init.aqua.rc \
     init.qcom.diag.rc \
     init.qcom.misc.rc \
     init.qcom.ramdump.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
-    init.recovery.qcom.rc \
     ueventd.qcom.rc
 
 # Display
@@ -161,10 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images \
     libhealthd.qcom
-
-# aqua boot helper
-PRODUCT_PACKAGES += \
-    aqua
 
 PRODUCT_PACKAGES += \
     copybit.msm8992 \

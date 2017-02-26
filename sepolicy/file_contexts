@@ -13,8 +13,6 @@
 /system/vendor/bin/mm-qcamera-daemon u:object_r:mm-qcamerad_exec:s0
 /system/bin/init\.qcom\.power\.sh u:object_r:init-power-sh_exec:s0
 /system/bin/init\.qcom\.sh        u:object_r:qcom-sh_exec:s0
-/sbin/aqua                         u:object_r:aqua_exec:s0
-/system/bin/fingerprint\.sh        u:object_r:fingerprint-sh_exec:s0
 /system/bin/readmac                u:object_r:readmac_exec:s0
 /vendor/bin/slim_daemon            u:object_r:location_exec:s0
 
