@@ -1,22 +1,17 @@
 [
   {
     "repository": "LineageOS/android_device_qcom_common",
-    "target_path": "device/qcom/common"
+    "target_path": "device/qcom/common",
     "branch": "cm-14.1"
   },
   {
     "repository": "Demon000/kernel_xiaomi_libra",
     "target_path": "kernel/xiaomi/libra",
-    "branch": "nougat"
+    "branch": "nougat-r2"
   },
   {
     "repository": "proprietary_vendor_xiaomi",
-    "target_path": "vendor/xiaomi",
-  },
-  {
-    "repository": "TheMuppets/proprietary_vendor_qcom_binaries",
-    "target_path": "vendor/qcom/binaries",
-    "branch": "cm-14.1"
+    "target_path": "vendor/xiaomi"
   },
   {
     "repository": "LineageOS/android_external_stlport",
