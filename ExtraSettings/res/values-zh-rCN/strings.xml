@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">边缘触控</string>
+
+    <!-- edge tap enable -->
+    <string name="pref_title_enable_etap">边缘双击返回</string>
+    <string name="pref_summary_enable_etap">双击手机边沿执行返回操作</string>
+
+    <string name="pref_header_extra">边缘触控</string>
+
+</resources>
