@@ -11,7 +11,8 @@
   },
   {
     "repository": "proprietary_vendor_xiaomi",
-    "target_path": "vendor/xiaomi"
+    "target_path": "vendor/xiaomi",
+    "branch": "n7.1"
   },
   {
     "repository": "LineageOS/android_external_stlport",
