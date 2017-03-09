@@ -10,7 +10,7 @@
     "branch": "nougat-r2"
   },
   {
-    "repository": "proprietary_vendor_xiaomi",
+    "repository": "AICP/proprietary_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
     "branch": "n7.1"
   },
