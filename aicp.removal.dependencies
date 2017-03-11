@@ -1,0 +1,8 @@
+[
+  {
+    "repository":   "AICP/frameworks_av"
+  },
+  {
+    "repository":   "LineageOS/android_hardware_libhardware_legacy"
+  }
+]
