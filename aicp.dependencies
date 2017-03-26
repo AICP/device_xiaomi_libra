@@ -7,7 +7,7 @@
   {
     "repository": "Demon000/kernel_xiaomi_libra",
     "target_path": "kernel/xiaomi/libra",
-    "branch": "nougat-r2"
+    "branch": "r2"
   },
   {
     "repository": "AICP/proprietary_vendor_xiaomi",
