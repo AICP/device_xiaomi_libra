@@ -133,7 +133,6 @@ echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
 echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
 echo 30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 echo 960000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-echo 480000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
 echo "74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:99" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
@@ -141,7 +140,7 @@ echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost
 echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/align_windows
 echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
-echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
 # restore A57's max
 cat /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
@@ -174,13 +173,9 @@ echo "4:4294967295 5:4294967295" > /sys/module/msm_performance/parameters/cpu_ma
 
 # input boost configuration
 echo 1 > /sys/module/cpu_boost/parameters/input_boost_enabled
-echo "0:960000 1:960000 2:960000 3:960000 4:0 5:0" >/sys/module/cpu_boost/parameters/input_boost_freq
-echo 0 > /sys/module/cpu_boost/parameters/boost_ms
-echo 0 > /sys/module/cpu_boost/parameters/input_boost_ms
-echo 0 > /sys/module/msm_performance/parameters/touchboost 0
 
 # core_ctl module
-echo 0 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
