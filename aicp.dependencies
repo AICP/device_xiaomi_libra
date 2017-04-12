@@ -7,7 +7,7 @@
   {
     "repository": "Demon000/kernel_xiaomi_libra",
     "target_path": "kernel/xiaomi/libra",
-    "branch": "r4"
+    "branch": "r5-basic"
   },
   {
     "repository": "AICP/proprietary_vendor_xiaomi",
