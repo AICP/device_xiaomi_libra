@@ -18,10 +18,5 @@
     "repository": "LineageOS/android_external_stlport",
     "target_path": "external/stlport",
     "branch": "cm-14.1"
-  },
-  {
-    "repository": "csolanol/android_hardware_libhardware_legacy",
-    "target_path": "hardware/libhardware_legacy",
-    "branch": "cm-14.1"
   }
 ]
