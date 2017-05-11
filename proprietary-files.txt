@@ -759,7 +759,6 @@ vendor/etc/diracmobile.config
 -bin/msm_irqbalance
 etc/thermal-engine-8992.conf
 -framework/QPerformance.jar
--vendor/bin/perfd
 -vendor/bin/thermal-engine
 vendor/etc/perf-profile0.conf
 vendor/etc/perf-profile1.conf
