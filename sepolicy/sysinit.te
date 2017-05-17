@@ -1,0 +1,8 @@
+allow sysinit cache_file:dir { getattr search };
+allow sysinit config_prop:property_service set;
+allow sysinit proc:file write;
+allow sysinit proc_dirty_ratio:file write;
+allow sysinit storage_file:dir getattr;
+allow sysinit system_data_file:dir write;
+allow sysinit system_data_file:file getattr;
+allow sysinit unlabeled:file getattr;
