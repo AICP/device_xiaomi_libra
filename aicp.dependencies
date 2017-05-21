@@ -2,7 +2,7 @@
   {
     "repository": "LineageOS/android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "branch": "cm-14.1"
+    "branch": "n7.1"
   },
   {
     "repository": "Demon000/kernel_xiaomi_libra",
