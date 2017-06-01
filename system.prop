@@ -121,8 +121,13 @@ ro.telephony.default_network=20,20
 ro.use_data_netmgrd=true
 telephony.lteOnCdmaDevice=1
 
-# Sdcard
-persist.fuse_sdcard=true
+# Sensors
+ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.gestures.camera=false
+ro.qc.sdk.sensors.gestures=true
+
+# Time services
+persist.timed.enable=true
 
 #
 # ADDITIONAL_BUILD_PROPERTIES (stock)
@@ -154,11 +159,4 @@ ro.allow.mock.location=1
 persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
-# Sensors
-ro.qc.sdk.camera.facialproc=false
-ro.qc.sdk.gestures.camera=false
-ro.qc.sdk.sensors.gestures=true
 
-# Time services
-persist.timed.enable=true
->>>>>>> ab6b019... system.prop: organize
