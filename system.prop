@@ -120,21 +120,6 @@ ro.qc.sdk.sensors.gestures=true
 # Time services
 persist.timed.enable=true
 
-#
-# ADDITIONAL_BUILD_PROPERTIES (stock)
-#
-ro.vendor.extension_library=libqti-perfd-client.so
-persist.radio.custom_ecc=1
-persist.radio.sib16_support=1
-ro.frp.pst=/dev/block/bootdevice/by-name/config
-af.fast_track_multiplier=1
-audio_hal.period_size=192
-ro.btconfig.if=uart
-ro.btconfig.dev=/dev/ttyHS0
-ro.btconfig.vendor=qcom
-ro.btconfig.chip=QCA6164
-persist.radio.apm_sim_not_pwdn=1
-
 # Hardware Info
 ro.device.chipset=Qualcomm MSM8992 Snapdragon 808
 ro.device.cpu=Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57)
