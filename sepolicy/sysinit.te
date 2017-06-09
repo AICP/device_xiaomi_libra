@@ -1,7 +1,7 @@
 allow sysinit cache_file:dir { getattr search };
 allow sysinit config_prop:property_service set;
-allow sysinit proc:file { open write };
-allow sysinit proc_dirty_ratio:file { open write };
+allow sysinit proc:file { open read write };
+allow sysinit proc_dirty_ratio:file { open read write };
 allow sysinit storage_file:dir getattr;
 allow sysinit system_data_file:dir { add_name write };
 allow sysinit system_data_file:file getattr;
