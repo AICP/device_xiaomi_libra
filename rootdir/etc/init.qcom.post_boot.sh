@@ -29,6 +29,7 @@
 # Ensure at most one A57 is online when thermal hotplug is disabled
 echo 1 > /sys/devices/system/cpu/cpu4/online
 echo 0 > /sys/devices/system/cpu/cpu5/online
+echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 
 # Disable thermal and bcl hotplug
 echo 0 > /sys/module/msm_thermal/core_control/enabled
