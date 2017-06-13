@@ -5,8 +5,8 @@
     "branch": "cm-14.1"
   },
   {
-    "repository": "Demon000/kernel_xiaomi_libra",
-    "target_path": "kernel/xiaomi/libra",
+    "repository": "LineageOS/android_kernel_xiaomi_msm8992",
+    "target_path": "kernel/xiaomi/msm8992",
     "branch": "cm-14.1"
   },
   {
