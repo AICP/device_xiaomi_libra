@@ -1,7 +1,7 @@
 [
   {
     "repository": "LineageOS/android_device_qcom_common",
-    "target_path": "device/qcom/common"
+    "target_path": "device/qcom/common",
     "branch": "lineage-15.0"
   },
     {
@@ -11,7 +11,7 @@
   },
   {
     "repository": "Lineage/android_kernel_xiaomi_msm8992",
-    "target_path": "kernel/xiaomi/msm8992"
+    "target_path": "kernel/xiaomi/msm8992",
     "branch": "lineage-15.0"
   }
 ]
