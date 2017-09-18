@@ -24,9 +24,7 @@ $(call inherit-product, device/xiaomi/libra/device.mk)
 
 # Inherit some common AICP stuff.
 $(call inherit-product, vendor/aicp/config/common.mk)
-
-# Inherit telephony stuff
-$(call inherit-product, vendor/aicp/config/telephony.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
@@ -34,7 +32,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := libra
 PRODUCT_NAME := aicp_libra
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Mi4c
+PRODUCT_MODEL := Mi-4c
 TARGET_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
