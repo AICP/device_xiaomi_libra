@@ -19,7 +19,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from kenzo device
+# Inherit from libra device
 $(call inherit-product, device/xiaomi/libra/device.mk)
 
 # Inherit some common AICP stuff.
@@ -42,7 +42,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
--include vendor/aicp/configs/bootanimation.mk
+#-include vendor/aicp/config/bootanimation.mk
 
 # AICP Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
