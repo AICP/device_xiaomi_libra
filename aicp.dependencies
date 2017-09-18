@@ -10,7 +10,7 @@
     "branch": "o8.0"
   },
   {
-    "repository": "LineageOS/kernel_xiaomi_libra",
+    "repository": "LineageOS/android_kernel_xiaomi_libra",
     "target_path": "kernel/xiaomi/msm8992",
     "branch": "lineage-15.0"
   }
