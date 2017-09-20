@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.ir@1.0-service"
+#define LOG_TAG "android.hardware.ir@1.0-service.libra"
 
 #include <android/hardware/ir/1.0/IConsumerIr.h>
 #include <hidl/LegacySupport.h>
