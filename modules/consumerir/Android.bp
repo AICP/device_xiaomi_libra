@@ -13,29 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_library_shared {
-    name: "android.hardware.ir@1.0-impl.libra",
-    defaults: ["hidl_defaults"],
-    relative_install_path: "hw",
-    proprietary: true,
-    srcs: ["ConsumerIr.cpp"],
-    shared_libs: [
-        "libhidlbase",
-        "libhidltransport",
-        "libhardware",
-        "liblog",
-        "libutils",
-        "android.hardware.ir@1.0",
-    ],
-}
-
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     name: "android.hardware.ir@1.0-service.libra",
     proprietary: true,
     init_rc: ["android.hardware.ir@1.0-service.libra.rc"],
-    srcs: ["service.cpp"],
+    srcs: ["service.cpp", "ConsumerIr.cpp"],
     shared_libs: [
         "liblog",
         "libhardware",

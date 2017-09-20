@@ -16,12 +16,36 @@
 
 #define LOG_TAG "android.hardware.ir@1.0-service.libra"
 
-#include <android/hardware/ir/1.0/IConsumerIr.h>
-#include <hidl/LegacySupport.h>
+#include <hidl/HidlTransportSupport.h>
+
+#include "ConsumerIr.h"
+
+using android::sp;
+
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
 
 using android::hardware::ir::V1_0::IConsumerIr;
-using android::hardware::defaultPassthroughServiceImplementation;
+using android::hardware::ir::V1_0::implementation::ConsumerIr;
+
+using android::status_t;
+using android::OK;
 
 int main() {
-    return defaultPassthroughServiceImplementation<IConsumerIr>();
+    android::sp<IConsumerIr> service = new ConsumerIr();
+
+    configureRpcThreadpool(1, true);
+
+    status_t status = service->registerAsService();
+    if (status != OK) {
+        ALOGE("Cannot register ConsumerIr HAL service.");
+        return 1;
+    }
+
+    ALOGI("ConsumerIr HAL service ready.");
+
+    joinRpcThreadpool();
+
+    ALOGI("ConsumerIr HAL service failed to join thread pool.");
+    return 1;
 }

@@ -16,10 +16,13 @@
 
 #define LOG_TAG "ConsumerIrService"
 
-#include <log/log.h>
-
-#include <hardware/hardware.h>
 #include <hardware/consumerir.h>
+#include <hardware/hardware.h>
+
+#include <linux/lirc.h>
+#include <fcntl.h>
+
+#include <log/log.h>
 
 #include "ConsumerIr.h"
 
@@ -29,55 +32,69 @@ namespace ir {
 namespace V1_0 {
 namespace implementation {
 
-ConsumerIr::ConsumerIr(consumerir_device_t *device) {
-    mDevice = device;
+#define LIRC_DEV_PATH       "/dev/lirc0"
+#define LIRC_DUTY_CYCLE     33
+
+static hidl_vec<ConsumerIrFreqRange> freqRangeVec {
+    {.min = 30000, .max = 60000},
+};
+
+static int openLircDev() {
+    int fd = open(LIRC_DEV_PATH, O_RDWR);
+
+    if (fd < 0) {
+        ALOGE("failed to open %s, error %d", LIRC_DEV_PATH, fd);
+    }
+
+    return fd;
 }
 
-// Methods from ::android::hardware::consumerir::V1_0::IConsumerIr follow.
+ConsumerIr::ConsumerIr() {}
+
 Return<bool> ConsumerIr::transmit(int32_t carrierFreq, const hidl_vec<int32_t>& pattern) {
-    return mDevice->transmit(mDevice, carrierFreq, pattern.data(), pattern.size()) == 0;
+    int lircFd;
+    int rc;
+
+    lircFd = openLircDev();
+    if (lircFd < 0) {
+        return lircFd;
+    }
+
+    rc = ioctl(lircFd, LIRC_SET_SEND_CARRIER, &carrierFreq);
+    if (rc < 0) {
+        ALOGE("failed to set carrier %d error %d", carrierFreq, rc);
+        goto out_close;
+    }
+
+    rc = ioctl(lircFd, LIRC_SET_SEND_DUTY_CYCLE, LIRC_DUTY_CYCLE);
+    if (rc < 0) {
+        ALOGE("failed to set duty cycle %d error %d", LIRC_DUTY_CYCLE, rc);
+        goto out_close;
+    }
+
+    if (pattern.size() & 1) {
+        rc = write(lircFd, pattern.data(), sizeof(*pattern.data())*pattern.size());
+    } else {
+        rc = write(lircFd, pattern.data(), sizeof(*pattern.data())*(pattern.size() - 1));
+        usleep(pattern.data()[pattern.size() - 1]);
+    }
+
+    if (rc < 0) {
+        ALOGE("failed to write pattern %zu error %d", pattern.size(), rc);
+        goto out_close;
+    }
+
+    rc = 0;
+
+out_close:
+    close(lircFd);
+
+    return rc == 0;
 }
 
 Return<void> ConsumerIr::getCarrierFreqs(getCarrierFreqs_cb _hidl_cb) {
-    int32_t len = mDevice->get_num_carrier_freqs(mDevice);
-    if (len < 0) {
-        _hidl_cb(false, {});
-        return Void();
-    }
-
-    consumerir_freq_range_t *rangeAr = new consumerir_freq_range_t[len];
-    bool success = (mDevice->get_carrier_freqs(mDevice, len, rangeAr) >= 0);
-    if (!success) {
-        _hidl_cb(false, {});
-        return Void();
-    }
-
-    hidl_vec<ConsumerIrFreqRange> rangeVec;
-    rangeVec.resize(len);
-    for (int32_t i = 0; i < len; i++) {
-        rangeVec[i].min = static_cast<uint32_t>(rangeAr[i].min);
-        rangeVec[i].max = static_cast<uint32_t>(rangeAr[i].max);
-    }
-    _hidl_cb(true, rangeVec);
+    _hidl_cb(true, freqRangeVec);
     return Void();
-}
-
-
-IConsumerIr* HIDL_FETCH_IConsumerIr(const char * /*name*/) {
-    consumerir_device_t *dev;
-    const hw_module_t *hw_module = NULL;
-
-    int ret = hw_get_module(CONSUMERIR_HARDWARE_MODULE_ID, &hw_module);
-    if (ret != 0) {
-        ALOGE("hw_get_module %s failed: %d", CONSUMERIR_HARDWARE_MODULE_ID, ret);
-        return nullptr;
-    }
-    ret = hw_module->methods->open(hw_module, CONSUMERIR_TRANSMITTER, (hw_device_t **) &dev);
-    if (ret < 0) {
-        ALOGE("Can't open consumer IR transmitter, error: %d", ret);
-        return nullptr;
-    }
-    return new ConsumerIr(dev);
 }
 
 }  // namespace implementation
