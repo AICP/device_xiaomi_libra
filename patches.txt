@@ -4,3 +4,4 @@
 198775 https://review.lineageos.org hardware/interfaces
 199643 https://review.lineageos.org hardware/qcom/bt
 199644 https://review.lineageos.org external/ant-wireless/ant/native
+58660 http://gerrit.aicp-rom.com frameworks/opt/telephony
