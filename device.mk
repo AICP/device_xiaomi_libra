@@ -166,8 +166,6 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libshims_get_process_name \
-    libshims_is_wifi_driver_loaded \
     android.hardware.gnss@1.0-impl
 
 PRODUCT_COPY_FILES += \
