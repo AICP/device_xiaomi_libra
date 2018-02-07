@@ -2,16 +2,16 @@
   {
     "repository": "LineageOS/android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "branch": "lineage-15.0"
+    "branch": "lineage-15.1"
   },
     {
     "repository": "AICP/proprietary_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
-    "branch": "o8.0"
+    "branch": "o8.1"
   },
   {
-    "repository": "Demon000/kernel_xiaomi_libra",
+    "repository": "Demon000/kernel_xiaomi_msm8992",
     "target_path": "kernel/xiaomi/msm8992",
-    "branch": "lineage-15.0"
+    "branch": "lineage-15.1"
   }
 ]
