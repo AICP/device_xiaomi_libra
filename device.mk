@@ -29,9 +29,6 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/libra/libra-vendor.mk)
 
-# Call the HWUI overrides
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
