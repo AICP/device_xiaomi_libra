@@ -45,6 +45,13 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
+void property_override_dual(char const system_prop[],
+        char const vendor_prop[], char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
+
 char const *heapstartsize;
 char const *heapgrowthlimit;
 char const *heapsize;
@@ -107,17 +114,17 @@ void vendor_load_properties()
 
     switch(board_id) {
     case LIBRA_BOARD_ID:
-        property_override("ro.product.model", "Mi4c");
-        property_override("ro.product.device", "libra");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "Mi4c");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "libra");
         property_override("ro.build.description", "libra-user 7.0 NRD90M V9.5.2.0.NXKCNFA release-keys");
-        property_override("ro.build.fingerprint", "Xiaomi/libra/libra:7.0/NRD90M/V9.5.2.0.NXKCNFA:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/libra/libra:7.0/NRD90M/V9.5.2.0.NXKCNFA:user/release-keys");
         property_override("ro.build.product", "libra");
         break;
     case AQUA_BOARD_ID:
-        property_override("ro.product.model", "Mi4s");
-        property_override("ro.product.device", "aqua");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "Mi4s");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "aqua");
         property_override("ro.build.description", "aqua-user 7.0 NRD90M V9.5.2.0.NXKCNFA release-keys");
-        property_override("ro.build.fingerprint", "Xiaomi/aqua/aqua:7.0/NRD90M/V9.5.2.0.NXKCNFA:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/aqua/aqua:7.0/NRD90M/V9.5.2.0.NXKCNFA:user/release-keys");
         property_override("ro.build.product", "aqua");
         property_set("ro.boot.fingerprint", "fpc");
         break;
