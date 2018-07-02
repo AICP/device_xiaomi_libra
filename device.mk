@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2015 The Android Open-Source Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +16,12 @@
 #
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS :=  \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
+
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -59,6 +65,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.soundtrigger@2.0-impl
 
@@ -163,14 +170,14 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    gps.msm8992
+    libshims_get_process_name \
+    libshims_is_wifi_driver_loaded \
+    android.hardware.gnss@1.0-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/configs/gps/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/configs/gps/izat.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/configs/gps/sap.conf:system/etc/sap.conf
 
 PRODUCT_COPY_FILES += \
@@ -231,6 +238,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.libra
 
+# LiveDisplay native
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@1.0-service-legacymm
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -258,7 +269,6 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libbson \
     libcnefeatureconfig \
-    libqsap_sdk \
     librmnetctl \
     libxml2
 
@@ -324,7 +334,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     readmac \
-    dhcpcd.conf \
     wificond \
     hostapd \
     libwpa_client \
